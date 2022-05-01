@@ -5,9 +5,9 @@ import heroImage from '../public/images/heroimages.webp';
 const Home: NextPage = () => {
   return (
     <main>
-        <div className={'h-[500px] md:min-h-screen relative -mt-[92px]'}>
+        <div className={'h-[500px] md:min-h-screen relative -mt-24'}>
             <h1>something wong!</h1>
-            <Image src={heroImage} layout={"fill"} objectFit={"cover"}/>
+            <Image alt="Deliverinc pengiriman" src={heroImage} layout={"fill"} objectFit={"cover"}/>
         </div>
         <div className="min-h-screen">
             asdsadsada

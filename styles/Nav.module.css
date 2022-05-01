@@ -1,0 +1,4 @@
+.linkHover {
+    @apply pb-1 ease-in-out hover:text-red-500 hover:font-medium hover:border-b hover:border-solid
+    hover:border-b-red-500 transition-all duration-200;
+}

@@ -13,7 +13,7 @@ export default function Layout({children}: { children: React.ReactNode }) {
             </Head>
             <div className="page-container">
                 <Header/>
-                <div className="container mx-auto px-4 md:px-8 lg:px-4">
+                <div>
                     {children}
                 </div>
                 <Footer/>

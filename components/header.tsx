@@ -41,7 +41,7 @@ export default function Header() {
 
     return (
         <header
-            className={`${isScrolled ? 'bg-gray-100/90 backdrop-blur shadow-lg' : 'bg-transparent'} ease-in-out sticky top-0 z-50 
+            className={`${isScrolled ? 'bg-gray-100/80 backdrop-blur shadow-lg' : 'bg-transparent'} ease-in-out sticky top-0 z-50 
             transition-all duration-200`}>
             <div
                 className={`container justify-between items-center flex h-16 md:h-24`}>
@@ -63,8 +63,8 @@ export default function Header() {
                                     <Link href={route.path}>
                                         {
                                             index === routes.length - 1 ?
-                                                <a className="bg-gradient-to-r to-rose-700 from-red-500
-                                                hover:bg-gradient-to-r hover:to-amber-500 hover:from-yellow-500 py-3 px-4
+                                                <a className="shadow-lg shadow-red-500/50 hover:shadow-yellow-500/50 bg-gradient-to-r to-rose-700 from-red-500 font-medium
+                                                hover:bg-gradient-to-r hover:to-amber-500 hover:from-yellow-500 py-3 px-6
                                                 rounded">{route.name}</a>
                                                 :
                                                 <a className={styles.linkHover + ` ${isScrolled && 'text-red-600'}`}>

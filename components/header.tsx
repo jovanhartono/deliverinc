@@ -2,7 +2,7 @@ import Link from "next/link";
 import {useEffect, useState} from "react";
 import {debounceTime, fromEvent, distinctUntilChanged} from "rxjs";
 import Image from 'next/image';
-import logo from '../public/images/logo.png';
+import logo from '../public/favicon.ico';
 import styles from '../styles/Nav.module.css';
 
 export default function Header() {
@@ -41,12 +41,12 @@ export default function Header() {
 
     return (
         <header
-            className={`${isScrolled ? 'bg-gray-100/80 backdrop-blur shadow-lg' : 'bg-transparent'} ease-in-out sticky top-0 z-50 
+            className={`${isScrolled ? 'bg-gray-100/90 backdrop-blur shadow-lg' : 'bg-transparent'} ease-in-out sticky top-0 z-50 
             transition-all duration-200`}>
             <div
                 className={`container justify-between items-center flex h-16 md:h-24`}>
                 <Link href="/" passHref={true}>
-                    <div className={'w-36 md:w-48 cursor-pointer'}>
+                    <div className={'w-20 md:w-32 cursor-pointer'}>
                         <Image alt="Logo Deliverinc" src={logo}/>
                     </div>
                 </Link>
@@ -67,7 +67,7 @@ export default function Header() {
                                                 hover:bg-gradient-to-r hover:to-amber-500 hover:from-yellow-500 py-3 px-6
                                                 rounded">{route.name}</a>
                                                 :
-                                                <a className={styles.linkHover + ` ${isScrolled && 'text-red-600'}`}>
+                                                <a className={styles.linkHover + ` ${isScrolled && 'text-red-600'} font-medium`}>
                                                     {route.name}
                                                 </a>
                                         }

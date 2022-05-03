@@ -11,13 +11,13 @@
               fill="#db2777" fill-opacity="0.8"/>
     </g>
     <defs>
-        <filter id="filter0_f_579_942" x="253.519" y="0.221191" width="1002.29" height="1250.11"
+        <filter id="filter0_f_579_942" x="253.519" y="0.221191"
                 filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
             <feFlood flood-opacity="0" result="BackgroundImageFix"/>
             <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
             <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur_579_942"/>
         </filter>
-        <filter id="filter1_f_579_942" x="0.633789" y="20.2212" width="1002.29" height="1250.11"
+        <filter id="filter1_f_579_942" x="0.633789" y="20.2212"
                 filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
             <feFlood flood-opacity="0" result="BackgroundImageFix"/>
             <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>

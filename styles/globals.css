@@ -19,3 +19,7 @@
         src: url("/fonts/Inter-Variable.woff2") format("woff2");
     }
 }
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    @apply bg-gray-100;
+}

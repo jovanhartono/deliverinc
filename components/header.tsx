@@ -3,30 +3,11 @@ import {useEffect, useState} from "react";
 import {debounceTime, fromEvent, distinctUntilChanged} from "rxjs";
 import Image from 'next/image';
 import logo from '../public/favicon.ico';
-import styles from '../styles/Nav.module.css';
+import {Route, routes} from "../const/routes";
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState<boolean>(false);
     const [isOpen, setIsOpen] = useState<boolean>(false);
-
-    const routes = [
-        {
-            name: "Tentang Kami",
-            path: "/tentang-kami",
-        },
-        {
-            name: "Cek Resi",
-            path: "/cek-resi",
-        },
-        {
-            name: "Cek Harga",
-            path: "/cek-harga",
-        },
-        {
-            name: "Hubungi Kami",
-            path: "/hubungi-kami",
-        },
-    ];
 
     useEffect(() => {
         const scrollEvent = fromEvent(window, "scroll").pipe(distinctUntilChanged(), debounceTime(25))
@@ -58,7 +39,7 @@ export default function Header() {
                 <nav className={"hidden md:block"}>
                     <ul className={`list-none flex space-x-6 text-sm uppercase`}>
                         {
-                            routes.map((route, index: number) => (
+                            routes.map((route: Route, index: number) => (
                                 <li key={index}>
                                     <Link href={route.path}>
                                         {
@@ -67,7 +48,7 @@ export default function Header() {
                                                 hover:bg-gradient-to-r hover:to-amber-500 hover:from-yellow-500 py-3 px-6
                                                 rounded">{route.name}</a>
                                                 :
-                                                <a className={styles.linkHover + ` ${isScrolled && 'text-red-600'} font-medium`}>
+                                                <a className={`${isScrolled && 'text-red-600'} link-text font-medium`}>
                                                     {route.name}
                                                 </a>
                                         }

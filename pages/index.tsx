@@ -120,7 +120,7 @@ const Home: NextPage = () => {
                     <div className={'w-full md:w-1/2 space-y-3 relative z-10'}>
                         <h1 className={'text-5xl font-bold text-gray-900'}>Alur
                             <span
-                                className={'text-transparent bg-gradient-to-b from-rose-500 to-red-500 bg-clip-text'}> Transaksi</span>
+                                className={'rose-clip-text'}> Transaksi</span>
                         </h1>
                         <p className={'text-lg text-gray-500 tracking-tight font-light'}>
                             <span className={'text-red-500 font-medium'}>DeliverInc </span>

@@ -20,6 +20,20 @@
     }
 }
 
+@layer components {
+    .rose-clip-text {
+        @apply text-transparent bg-gradient-to-b from-rose-500 to-red-500 bg-clip-text;
+    }
+
+    .link-text {
+        @apply pb-1 text-gray-500 hover:border-b hover:border-b-rose-500 hover:text-rose-500 transition-all duration-200 ease-in;
+    }
+
+    .basic-transition {
+        @apply transition-all duration-200 ease-in-out;
+    }
+}
+
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-    @apply bg-gray-100;
+    @apply bg-rose-500;
 }

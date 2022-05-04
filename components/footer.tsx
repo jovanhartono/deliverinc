@@ -8,7 +8,6 @@ import WhatsappIcon from '../public/images/whatsapp-icon.svg';
 import {MailIcon} from "@heroicons/react/outline";
 
 export default function Footer() {
-    const id = useId();
 
     return (
         <footer className={'container py-12'}>
@@ -23,9 +22,9 @@ export default function Footer() {
                     <nav>
                         <ul className={'space-y-3'}>
                             {
-                                routes.map((route: Route) => {
+                                routes.map((route: Route, index) => {
                                     return (
-                                        <li key={id}>
+                                        <li key={index}>
                                             <Link href={route.path}>
                                                 <a className={`link-text tracking-tight font-light text-sm`}>{route.name}</a>
                                             </Link>

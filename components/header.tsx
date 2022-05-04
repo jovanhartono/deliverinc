@@ -48,7 +48,7 @@ export default function Header() {
                                                 hover:bg-gradient-to-r hover:to-amber-500 hover:from-yellow-500 py-3 px-6
                                                 rounded">{route.name}</a>
                                                 :
-                                                <a className={`${isScrolled && 'text-red-600'} link-text font-medium`}>
+                                                <a className={`${isScrolled && 'text-red-600'} text-gray-100 link-text font-medium`}>
                                                     {route.name}
                                                 </a>
                                         }

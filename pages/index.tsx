@@ -12,7 +12,8 @@ import {
     ThumbUpIcon
 } from "@heroicons/react/outline";
 import {ComponentProps, useRef, useState} from "react";
-import RadialGradient from '../public/images/radial-gradient.svg'
+import RadialGradient from '../public/images/radial-gradient.svg';
+import RadialGradient2 from '../public/images/radial-gradient-2.svg';
 import Head from "next/head";
 import SwiperCore, {Autoplay, Pagination} from "swiper";
 import {Swiper, SwiperSlide} from 'swiper/react';
@@ -20,6 +21,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
+import SwiperCard from "../components/swiper-card";
+import {customers} from "../const/customer";
 
 type HeroIcon = (props: ComponentProps<'svg'>) => JSX.Element;
 
@@ -66,6 +69,25 @@ const Home: NextPage = () => {
             image: DeliveryImage
         }
     ];
+
+    const achievements = [
+        {
+            number: '4.9+',
+            caption: 'Ulasan Google'
+        },
+        {
+            number: '1K+',
+            caption: 'Pengiriman'
+        },
+        {
+            number: '1K+',
+            caption: 'Total Kubikasi'
+        },
+        {
+            number: '99%',
+            caption: 'Kepuasan Pelanggan'
+        }
+    ]
 
     const [iconBoxes, setIconBoxes] = useState<IconBox[]>(dataset);
 
@@ -115,9 +137,9 @@ const Home: NextPage = () => {
                     <Image alt="Deliverinc pengiriman" src={heroImage} layout={"fill"} objectFit={"cover"}/>
                 </div>
                 <div
-                    className="min-h-[75vh] scroll-mt-28 md:scroll-mt-48 container mt-12 md:mt-24 relative flex-col md:flex-row flex md:items-start"
+                    className="scroll-mt-28 md:scroll-mt-48 container mt-12 md:mt-24 relative grid grid-cols-1 md:grid-cols-2 gap-12"
                     ref={scrollRef}>
-                    <div className={'w-full md:w-1/2 space-y-3 relative z-10'}>
+                    <div className={'space-y-3 relative z-10 md:mt-6'}>
                         <h1 className={'text-5xl font-bold text-gray-900'}>Alur
                             <span
                                 className={'rose-clip-text'}> Transaksi</span>
@@ -148,9 +170,9 @@ const Home: NextPage = () => {
                             }
                         </div>
                     </div>
-                    <div className={'w-full md:w-1/2 flex justify-center mt-8 md:mt-0'}>
+                    <div className={'flex justify-center'}>
                         <div
-                            className={`shadow-lg shadow-pink-500/25 min-h-[350px] xl:min-h-[550px]
+                            className={`shadow-lg shadow-pink-500/25 min-h-[475px] xl:min-h-[550px]
                             h-auto relative z-10 rounded-lg w-full xl:w-4/5`}>
                             <Swiper
                                 slidesPerView={1}
@@ -178,7 +200,8 @@ const Home: NextPage = () => {
                                             <SwiperSlide key={index}>
                                                 <div className="rounded-lg overflow-hidden py-6">
                                                     <div className="relative w-full aspect-video">
-                                                        <Image alt={iconBox.title} src={iconBox.image} objectFit={"contain"} layout={"fill"}/>
+                                                        <Image alt={iconBox.title} src={iconBox.image}
+                                                               objectFit={"contain"} layout={"fill"}/>
                                                     </div>
                                                     <div className={'p-6 space-y-3'}>
                                                         <h1 className={'text-2xl md:text-4xl font-semibold text-rose-500 uppercase'}>{`0${index + 1}. ${iconBoxes[selectedIndex].title}`}</h1>
@@ -196,6 +219,59 @@ const Home: NextPage = () => {
                         className="absolute top-0 left-0 -right-1/2 md:right-0 md:-top-1/3 md:-left-1/4 max-w-full bottom-0">
                         <div className="relative h-full">
                             <Image src={RadialGradient} alt={'deliverinc radial background'} layout={"fill"}/>
+                        </div>
+                    </div>
+                </div>
+                <div className={'grid grid-cols-1 md:grid-cols-2 py-24 container gap-12 relative'}>
+                    <div className={'space-y-3 md:mt-6 relative z-10'}>
+                        <span
+                            className={'uppercase tracking-widest text-sm font-medium text-rose-500'}>testimonial</span>
+                        <h1 className={'text-5xl font-bold text-gray-900'}>Pelanggan
+                            <span
+                                className={'rose-clip-text'}> Kami</span>
+                        </h1>
+                        <p className={'text-lg text-gray-500 tracking-tight font-light'}>
+                            <span className={'text-red-500 font-medium'}>DeliverInc </span>
+                            dipercaya oleh banyak kalangan masyarakat sebagai solusi kargo <span
+                            className={'rose-clip-text font-medium'}>terbaik</span> untuk kebutuhan bisnis.
+                        </p>
+                    </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 py-24 container gap-12 relative">
+                    <div className={'space-y-3 md:mt-6 relative z-10'}>
+                        <span
+                            className={'uppercase tracking-widest text-sm font-medium text-rose-500'}>testimonial</span>
+                        <h1 className={'text-5xl font-bold text-gray-900'}>Pelanggan
+                            <span
+                                className={'rose-clip-text'}> Kami</span>
+                        </h1>
+                        <p className={'text-lg text-gray-500 tracking-tight font-light'}>
+                            <span className={'text-red-500 font-medium'}>DeliverInc </span>
+                            dipercaya oleh banyak kalangan masyarakat sebagai solusi kargo <span
+                            className={'rose-clip-text font-medium'}>terbaik</span> untuk kebutuhan bisnis.
+                        </p>
+                        <div className="pt-3 max-w-full">
+                            <ul className={'space-x-6 flex'}>
+                                {
+                                    achievements.map((item: {number:string, caption: string}, index: number) => {
+                                        return (
+                                            <li key={index}>
+                                                <h2 className={'text-3xl md:text-4xl font-semibold text-transparent bg-gradient-to-b from-amber-600 to-yellow-300 bg-clip-text'}>{item.number}</h2>
+                                                <p className={'text-gray-500 text-sm tracking-tight'}>{item.caption}</p>
+                                            </li>
+                                        );
+                                    })
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                    <div className={'min-h-[350px] lg:min-h-[550px] flex'}>
+                        <SwiperCard swiperData={customers}/>
+                    </div>
+                    <div
+                        className="absolute max-w-full -top-1/2 bottom-0 left-0 right-0 md:inset-0">
+                        <div className="relative h-full">
+                            <Image src={RadialGradient2} alt={'deliverinc radial background'} layout={"fill"}/>
                         </div>
                     </div>
                 </div>

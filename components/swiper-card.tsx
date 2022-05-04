@@ -26,7 +26,7 @@ export default function SwiperCard({swiperData}: SwiperCardProps) {
             {
                 swiperData.map((item: Testimonial, index: number) => {
                     return (
-                        <SwiperSlide key={index} className={'!transition-all bg-white shadow-lg shadow-amber-500/20 hover:shadow-lg hover:shadow-amber-500/40 duration-200 border border-gray-100 ease-in-out rounded-lg'}>
+                        <SwiperSlide key={index} className={'bg-white shadow-lg shadow-amber-500/20 hover:shadow-lg hover:shadow-amber-500/40 border border-gray-100 rounded-lg'}>
                             <div className="flex flex-col p-6 space-y-6 h-full">
                                 <ChatAlt2Icon className={'w-16 h-16 md:w-24 md:h-24 text-rose-500/75 ml-auto'}/>
                                 <div className="flex flex-col flex-grow justify-between space-y-6">

@@ -1,6 +1,6 @@
 import Logo from '../public/favicon.ico';
 import Image from 'next/image';
-import {Route, routes} from "../const/routes";
+import {Route, Routes} from "../const/routes";
 import Link from 'next/link';
 import InstagramIcon from '../public/images/instagram-icon.svg';
 import WhatsappIcon from '../public/images/whatsapp-icon.svg';
@@ -21,7 +21,7 @@ export default function Footer() {
                     <nav>
                         <ul className={'space-y-3'}>
                             {
-                                routes.map((route: Route, index) => {
+                                Routes.map((route: Route, index) => {
                                     return (
                                         <li key={index}>
                                             <Link href={route.path}>

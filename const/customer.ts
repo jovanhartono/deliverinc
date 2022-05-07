@@ -11,7 +11,7 @@ export type Testimonial = {
     avatar: StaticImageData;
 };
 
-export const customers: Testimonial[] = [
+export const Customers: Testimonial[] = [
     {
         name: 'Salim',
         title: 'Pengusaha Mesin',

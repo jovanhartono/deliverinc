@@ -22,7 +22,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import SwiperCard from "../components/swiper-card";
-import {customers} from "../const/customer";
+import {Customers} from "../const/customer";
+import {Service, Services} from "../const/services";
 
 type HeroIcon = (props: ComponentProps<'svg'>) => JSX.Element;
 
@@ -118,7 +119,7 @@ const Home: NextPage = () => {
             <main className={'scroll-smooth'}>
                 <div className={'h-[550px] md:min-h-screen relative flex items-center justify-around'}>
                     <div className="z-10 container">
-                        <div className={'w-full md:w-1/2 break-words space-y-4'}>
+                        <div className={'w-full sm:w-2/3 lg:w-1/2 break-words space-y-4'}>
                             <h1 className={'text-5xl md:text-6xl lg:text-7xl font-bold'}>Importir <br/> China-Indonesia
                             </h1>
                             <p className={'text-sm md:text-base font-normal md:font-light w-full'}>
@@ -216,28 +217,48 @@ const Home: NextPage = () => {
                         </div>
                     </div>
                     <div
-                        className="absolute top-0 left-0 -right-1/2 md:right-0 md:-top-1/3 md:-left-1/4 max-w-full bottom-0">
+                        className="absolute top-0 left-0 -right-1/2 md:right-0 md:-top-1/5 md:-left-1/4 max-w-full bottom-0">
                         <div className="relative h-full">
                             <Image src={RadialGradient} alt={'deliverinc radial background'} layout={"fill"}/>
                         </div>
                     </div>
                 </div>
-                <div className={'grid grid-cols-1 md:grid-cols-2 py-24 gap-12 relative min-h-[75vh] bg-gradient-to-br from-amber-50 via-red-50 to-rose-50'}>
-                    <div className={'space-y-3 md:mt-6 relative z-10'}>
-                        <span
-                            className={'uppercase tracking-widest text-sm font-medium text-rose-500'}>testimonial</span>
-                        <h1 className={'text-5xl font-bold text-gray-900'}>Pelanggan
-                            <span
-                                className={'rose-clip-text'}> Kami</span>
-                        </h1>
-                        <p className={'text-lg text-gray-500 tracking-tight font-light'}>
-                            <span className={'text-red-500 font-medium'}>DeliverInc </span>
-                            dipercaya oleh banyak kalangan masyarakat sebagai solusi kargo <span
-                            className={'rose-clip-text font-medium'}>terbaik</span> untuk kebutuhan bisnis.
-                        </p>
+                <div className={'py-12 md:py-24 min-h-[75vh] bg-gradient-to-br from-amber-50 via-red-50 to-rose-50'}>
+                    <div className="container grid grid-cols-1 gap-12">
+                        <div className={'space-y-3 md:mt-6 relative z-10 text-left lg:text-center'}>
+                            <h1 className={'text-5xl md:text-6xl font-bold text-gray-900'}>Layanan
+                                <span
+                                    className={'text-transparent bg-clip-text bg-gradient-to-b from-red-600 to-pink-400'}> Kami</span>
+                            </h1>
+                            <p className={'text-lg text-gray-500 tracking-tight font-light'}>
+                                <span className={'text-red-500 font-medium'}> </span>
+                                Kami menyediakan layanan <span
+                                className={'text-transparent bg-clip-text bg-gradient-to-b from-red-600 to-pink-400 font-medium'}>terbaik</span> dengan
+                                harga yang kompetitif untuk semua kebutuhan bisnis anda.
+                            </p>
+                        </div>
+                        <div className="grid sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                            {
+                                Services.map((service: Service, index: number) => {
+                                    return (
+                                        <div key={index}
+                                             className="group p-4 ring rounded-lg ring-gray-300 ring-1 shadow-md hover:shadow-amber-100 hover:ring-amber-500 space-y-4">
+                                            <service.icon
+                                                className={'h-12 w-12 text-rose-500 group-hover:text-amber-500 basic-transition'}/>
+                                            <div className={'space-y-2'}>
+                                                <h2 className={'text-gray-900 text-2xl font-medium group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-b group-hover:from-amber-600 group-hover:to-yellow-400'}>{service.title}</h2>
+                                                <p className={'group-hover:text-gray-600 text-gray-500 tracking-tight font-light text-base md:text-sm'}>{service.description}</p>
+                                            </div>
+                                        </div>
+
+                                    );
+                                })
+                            }
+                        </div>
                     </div>
                 </div>
-                <div className="grid grid-cols-1 overflow-hidden md:grid-cols-2 py-24 container gap-12 relative">
+                <div
+                    className="grid grid-cols-1 overflow-hidden md:grid-cols-2 py-12 md:py-24 container gap-12 relative">
                     <div className={'space-y-3 md:mt-6 relative z-10'}>
                         <span
                             className={'uppercase tracking-widest text-sm font-medium text-rose-500'}>testimonial</span>
@@ -246,14 +267,15 @@ const Home: NextPage = () => {
                                 className={'rose-clip-text'}> Kami</span>
                         </h1>
                         <p className={'text-lg text-gray-500 tracking-tight font-light'}>
-                            <span className={'text-red-500 font-medium'}>DeliverInc </span>
+                            <span className={'text-red-500 font-medium'}>Deliverinc </span>
                             dipercaya oleh banyak kalangan masyarakat sebagai solusi kargo <span
-                            className={'rose-clip-text font-medium'}>terbaik</span> untuk kebutuhan bisnis.
+                            className={'bg-gradient-to-b text-transparent bg-clip-text from-amber-600 to-yellow-400 font-medium'}>terbaik</span> untuk
+                            kebutuhan bisnis.
                         </p>
                         <div className="pt-3 max-w-full">
                             <ul className={'space-x-6 flex'}>
                                 {
-                                    achievements.map((item: {number:string, caption: string}, index: number) => {
+                                    achievements.map((item: { number: string, caption: string }, index: number) => {
                                         return (
                                             <li key={index}>
                                                 <h2 className={'text-3xl md:text-4xl font-semibold text-transparent bg-gradient-to-b from-amber-600 to-yellow-300 bg-clip-text'}>{item.number}</h2>
@@ -266,7 +288,7 @@ const Home: NextPage = () => {
                         </div>
                     </div>
                     <div className={'min-h-[350px] lg:min-h-[550px] flex'}>
-                        <SwiperCard swiperData={customers}/>
+                        <SwiperCard swiperData={Customers}/>
                     </div>
                     <div
                         className="absolute max-w-full -top-1/2 bottom-0 left-0 right-0 md:inset-0">

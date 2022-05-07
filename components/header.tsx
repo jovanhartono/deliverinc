@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import {debounceTime, fromEvent, distinctUntilChanged} from "rxjs";
 import Image from 'next/image';
 import logo from '../public/favicon.ico';
-import {Route, routes} from "../const/routes";
+import {Route, Routes} from "../const/routes";
 import {useRouter} from "next/router";
 
 export default function Header() {
@@ -31,7 +31,7 @@ export default function Header() {
         <header
             className={`${isScrolled || isOpen ? 'bg-white/90 shadow-lg backdrop-blur' : 'bg-transparent'} basic-transition fixed top-0 right-0 left-0 z-50`}>
             <div
-                className={`container justify-between items-center flex h-16 md:h-24`}>
+                className={`container justify-between items-center flex h-20 md:h-24`}>
                 <Link href="/" passHref={true}>
                     <div onClick={() => setIsOpen(false)} className={'w-20 md:w-32 cursor-pointer'}>
                         <Image alt="Logo Deliverinc" src={logo}/>
@@ -47,11 +47,11 @@ export default function Header() {
                 <nav className={"hidden md:block"}>
                     <ul className={`list-none flex space-x-6 text-sm uppercase`}>
                         {
-                            routes.map((route: Route, index: number) => (
+                            Routes.map((route: Route, index: number) => (
                                 <li key={index}>
                                     <Link href={route.path}>
                                         {
-                                            index === routes.length - 1 ?
+                                            index === Routes.length - 1 ?
                                                 <a className="shadow-lg shadow-red-500/50 hover:shadow-yellow-500/50 bg-gradient-to-r to-rose-700 from-red-500 font-medium
                                                 hover:bg-gradient-to-r hover:to-amber-500 hover:from-yellow-500 py-3 px-6
                                                 rounded">{route.name}</a>
@@ -72,7 +72,7 @@ export default function Header() {
                 <nav className={`${isOpen ? 'block' : 'hidden'} text-gray-500 basic-transition`}>
                     <ul className={'text-xl font-light tracking-tight space-y-4'}>
                         {
-                            [firstRouterElement, ...routes].map((route: Route, index: number) => {
+                            [firstRouterElement, ...Routes].map((route: Route, index: number) => {
                                 return (
                                     <li key={index}>
                                         <Link href={route.path}>

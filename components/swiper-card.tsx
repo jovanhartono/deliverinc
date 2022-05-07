@@ -14,7 +14,7 @@ interface SwiperCardProps {
 export default function SwiperCard({swiperData}: SwiperCardProps) {
     return (
         <Swiper
-            className={'mySwiper h-full w-full aspect-square xl:w-4/5'}
+            className={'mySwiper md:min-h-[475px] h-full w-full aspect-square xl:w-4/5'}
             effect={"cards"}
             autoplay={{
                 delay: 5000,

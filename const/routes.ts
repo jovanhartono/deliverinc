@@ -3,7 +3,7 @@ export type Route = {
     path: string
 };
 
-export const routes: Route[] = [
+export const Routes: Route[] = [
     {
         name: "Tentang Kami",
         path: "/tentang-kami",

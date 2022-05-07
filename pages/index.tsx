@@ -15,7 +15,7 @@ import {ComponentProps, useRef, useState} from "react";
 import RadialGradient from '../public/images/radial-gradient.svg';
 import RadialGradient2 from '../public/images/radial-gradient-2.svg';
 import Head from "next/head";
-import SwiperCore, {Autoplay, EffectCards, Pagination} from "swiper";
+import SwiperCore, {Autoplay, Pagination} from "swiper";
 import {Swiper, SwiperSlide} from 'swiper/react';
 import "swiper/css";
 import "swiper/css/navigation";
@@ -116,7 +116,7 @@ const Home: NextPage = () => {
                 <meta name="description" content="Forwarder China-Indonesia Terpercaya"/>
             </Head>
             <main className={'scroll-smooth'}>
-                <div className={'h-[550px] md:min-h-screen relative -mt-16 md:-mt-24 flex items-center justify-around'}>
+                <div className={'h-[550px] md:min-h-screen relative flex items-center justify-around'}>
                     <div className="z-10 container">
                         <div className={'w-full md:w-1/2 break-words space-y-4'}>
                             <h1 className={'text-5xl md:text-6xl lg:text-7xl font-bold'}>Importir <br/> China-Indonesia
@@ -137,7 +137,7 @@ const Home: NextPage = () => {
                     <Image alt="Deliverinc pengiriman" src={heroImage} layout={"fill"} objectFit={"cover"}/>
                 </div>
                 <div
-                    className="scroll-mt-28 md:scroll-mt-48 container mt-12 md:mt-24 relative grid grid-cols-1 md:grid-cols-2 gap-12"
+                    className="scroll-mt-16 md:scroll-mt-24 container py-12 md:py-24 relative grid grid-cols-1 md:grid-cols-2 gap-12"
                     ref={scrollRef}>
                     <div className={'space-y-3 relative z-10 md:mt-6'}>
                         <h1 className={'text-5xl font-bold text-gray-900'}>Alur
@@ -222,7 +222,7 @@ const Home: NextPage = () => {
                         </div>
                     </div>
                 </div>
-                <div className={'grid grid-cols-1 md:grid-cols-2 py-24 container gap-12 relative'}>
+                <div className={'grid grid-cols-1 md:grid-cols-2 py-24 gap-12 relative min-h-[75vh] bg-gradient-to-br from-amber-50 via-red-50 to-rose-50'}>
                     <div className={'space-y-3 md:mt-6 relative z-10'}>
                         <span
                             className={'uppercase tracking-widest text-sm font-medium text-rose-500'}>testimonial</span>
@@ -237,7 +237,7 @@ const Home: NextPage = () => {
                         </p>
                     </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 py-24 container gap-12 relative">
+                <div className="grid grid-cols-1 overflow-hidden md:grid-cols-2 py-24 container gap-12 relative">
                     <div className={'space-y-3 md:mt-6 relative z-10'}>
                         <span
                             className={'uppercase tracking-widest text-sm font-medium text-rose-500'}>testimonial</span>

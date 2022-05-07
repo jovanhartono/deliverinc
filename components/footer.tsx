@@ -1,7 +1,6 @@
 import Logo from '../public/favicon.ico';
 import Image from 'next/image';
 import {Route, routes} from "../const/routes";
-import {useId} from "react";
 import Link from 'next/link';
 import InstagramIcon from '../public/images/instagram-icon.svg';
 import WhatsappIcon from '../public/images/whatsapp-icon.svg';

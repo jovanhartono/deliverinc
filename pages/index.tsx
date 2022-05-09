@@ -60,14 +60,14 @@ const Home: NextPage = () => {
             title: 'Kirim',
             isActive: false,
             details: 'Setelah melewati tahap pemeriksaan, kami akan mengirimkan barang sesuai dengan layanan yang Anda pilih. Saat barang Anda sampai di Indonesia kami dapat melakukan pengurusan Customs Clearance dan Tax Refund sesuai prosedur yang berlaku di China.',
-            image: DeliveredOrderImage
+            image: DeliveryImage
         },
         {
             icon: ThumbUpIcon,
             title: 'Sampai',
             isActive: false,
             details: 'Setelah barang Anda tiba di gudang kami di Jakarta, kami akan menghubungi anda terkait penagihan yang telah disepakati. Kemudian barang siap diantar ke lokasi Anda.',
-            image: DeliveryImage
+            image: DeliveredOrderImage
         }
     ];
 
@@ -127,12 +127,12 @@ const Home: NextPage = () => {
                                 solutif,
                                 mulai dari jasa pengiriman melalui laut dan udara hingga jasa pembelian dan transfer.
                             </p>
-                            <a className="shadow-md shadow-red-500/50 hover:shadow-yellow-500/50 cursor-pointer inline-flex items-center bg-gradient-to-r to-rose-700 from-red-500 font-medium
+                            <button className="shadow-md shadow-red-500/50 hover:shadow-yellow-500/50 cursor-pointer inline-flex items-center bg-gradient-to-r to-rose-700 from-red-500 font-medium
                                                 hover:bg-gradient-to-r hover:to-amber-500 hover:from-yellow-500 py-3 px-6
                                                 rounded" onClick={scrollIntoView}>
                                 <span>Lebih Lanjut</span>
                                 <ArrowDownIcon className={'inline-block h-4 w-4 ml-3'}/>
-                            </a>
+                            </button>
                         </div>
                     </div>
                     <Image alt="Deliverinc pengiriman" src={heroImage} layout={"fill"} objectFit={"cover"}/>
@@ -246,7 +246,7 @@ const Home: NextPage = () => {
                                             <service.icon
                                                 className={'h-12 w-12 text-rose-500 group-hover:text-amber-500 basic-transition'}/>
                                             <div className={'space-y-2'}>
-                                                <h2 className={'text-gray-900 text-2xl font-medium group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-b group-hover:from-amber-600 group-hover:to-yellow-400'}>{service.title}</h2>
+                                                <h2 className={'text-gray-900 text-2xl font-semibold group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-b group-hover:from-amber-600 group-hover:to-yellow-400'}>{service.title}</h2>
                                                 <p className={'group-hover:text-gray-600 text-gray-500 tracking-tight font-light text-base md:text-sm'}>{service.description}</p>
                                             </div>
                                         </div>

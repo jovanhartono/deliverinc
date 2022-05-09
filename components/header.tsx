@@ -40,9 +40,9 @@ export default function Header() {
                 <div className={'block md:hidden w-8 h-8 flex flex-col justify-center cursor-pointer'}
                      onClick={() => setIsOpen(!isOpen)}>
                     <span
-                        className={`${isOpen ? 'rotate-45 translate-y-[2px]' : '-translate-y-1'} ${isScrolled || isOpen ? 'bg-red-600' : 'bg-gray-100'} h-[2px] transform transition-all duration-200 ease-in-out`}/>
+                        className={`${isOpen ? 'rotate-45 translate-y-[2px]' : '-translate-y-1'} ${isScrolled || isOpen || router.pathname === '/tentang-kami' ? 'bg-red-600' : 'bg-gray-100'} h-[2px] transform transition-all duration-200 ease-in-out`}/>
                     <span
-                        className={`${isOpen ? '-rotate-45 translate-y-0' : 'translate-y-1'} ${isScrolled || isOpen ? 'bg-red-600' : 'bg-gray-100'} h-[2px] transform transition-all duration-200 ease-in-out`}/>
+                        className={`${isOpen ? '-rotate-45 translate-y-0' : 'translate-y-1'} ${isScrolled || isOpen || router.pathname === '/tentang-kami' ? 'bg-red-600' : 'bg-gray-100'} h-[2px] transform transition-all duration-200 ease-in-out`}/>
                 </div>
                 <nav className={"hidden md:block"}>
                     <ul className={`list-none flex space-x-6 text-sm uppercase`}>
@@ -56,7 +56,7 @@ export default function Header() {
                                                 hover:bg-gradient-to-r hover:to-amber-500 hover:from-yellow-500 py-3 px-6
                                                 rounded">{route.name}</a>
                                                 :
-                                                <a className={`${isScrolled && 'text-red-600'} basic-transition text-gray-100 link-text font-medium`}>
+                                                <a className={`${(router.pathname === '/tentang-kami' || isScrolled) && 'text-red-600'} basic-transition text-gray-100 link-text font-medium`}>
                                                     {route.name}
                                                 </a>
                                         }

@@ -9,7 +9,7 @@ import {MailIcon} from "@heroicons/react/outline";
 export default function Footer() {
 
     return (
-        <footer className={'container py-12'}>
+        <footer className={'container padding-section'}>
             <div className={'grid grid-cols-2 gap-12 md:gap-0 md:grid-cols-4'}>
                 <div className={'col-span-2 md:col-span-1'}>
                     <div className="relative w-32 h-12">

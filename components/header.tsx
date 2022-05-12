@@ -45,16 +45,16 @@ export default function Header() {
                         className={`${isOpen ? '-rotate-45 translate-y-0' : 'translate-y-1'} ${isScrolled || isOpen || router.pathname === '/tentang-kami' ? 'bg-red-600' : 'bg-gray-100'} h-[2px] transform transition-all duration-200 ease-in-out`}/>
                 </div>
                 <nav className={"hidden md:block"}>
-                    <ul className={`list-none flex space-x-6 text-sm uppercase`}>
+                    <ul className={`list-none flex space-x-6 text-sm uppercase items-center`}>
                         {
                             Routes.map((route: Route, index: number) => (
                                 <li key={index}>
                                     <Link href={route.path}>
                                         {
                                             index === Routes.length - 1 ?
-                                                <a className="shadow-lg shadow-red-500/50 hover:shadow-yellow-500/50 bg-gradient-to-r to-rose-700 from-red-500 font-medium
-                                                hover:bg-gradient-to-r hover:to-amber-500 hover:from-yellow-500 py-3 px-6
-                                                rounded">{route.name}</a>
+                                                <button className="button">
+                                                    <a className={'uppercase'}>{route.name}</a>
+                                                </button>
                                                 :
                                                 <a className={`${(router.pathname === '/tentang-kami' || isScrolled) && 'text-red-600'} basic-transition text-gray-100 link-text font-medium`}>
                                                     {route.name}
@@ -78,7 +78,7 @@ export default function Header() {
                                         <Link href={route.path}>
                                             <a onClick={() => setIsOpen(false)}
                                                className={`${isOpen ? 'opacity-100' : 'opacity-0'} ${router.pathname === route.path && 'text-rose-500 font-medium pb-1 border-b border-b-rose-500'}
-                                            link-text cursor-pointer transition-all duration-200 ease-in-out`}>{route.name}</a>
+                                            link-text cursor-pointer`}>{route.name}</a>
                                         </Link>
                                     </li>
                                 )

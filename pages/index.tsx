@@ -234,7 +234,6 @@ const Home: NextPage = () => {
                                                 <p className={'group-hover:text-gray-600 text-sm description-card'}>{service.description}</p>
                                             </div>
                                         </div>
-
                                     );
                                 })
                             }

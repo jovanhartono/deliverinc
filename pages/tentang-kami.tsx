@@ -4,9 +4,30 @@ import {NextPage} from "next";
 import {ArrowRightIcon} from "@heroicons/react/outline";
 import ContainerImage from '../public/images/background/container.webp';
 import BusinessDealImage from '../public/images/background/deliverinc-bisnis.svg';
+import QuestionImage from '../public/images/background/pertanyaan.svg';
 import Link from "next/link";
 import {BadgeCheckIcon, ShieldCheckIcon} from "@heroicons/react/solid";
 import {Benefit, Benefits} from "../const/benefits";
+import Accordion from "../components/accordion";
+
+const frequentlyAskedQuestions: {title: string, description: string}[] = [
+    {
+        title: 'Apa yang harus saya lakukan jika ingin impor barang ?',
+        description: 'Jika anda sudah mendapatkan supplier barang yang anda inginkan dan telah melakukan transaksi, kami akan menyediakan kode marking dan alamat gudang kami untuk Anda teruskan kepada supplier. Supplier akan mengirimkan barang Anda ke gudang kami dan kami yang akan meneruskan pengiriman ke lokasi Anda.',
+    },
+    {
+        title: 'Berapa lama durasi pengiriman ?',
+        description: 'Dengan pengiriman melalui laut, barang Anda akan sampai pada 25-30 hari setelah barang sampai di gudang kami di China. Dengan pengiriman melalui udara, barang Anda akan sampai pada 7-10 hari setelah barang sampai di gudang kami di China.',
+    },
+    {
+        title: 'Bagaimana jika barang saya hilang ?',
+        description: 'Dengan proteksi yang extra, kami jamin barang Anda tidak akan hilang. Namun Anda tidak perlu khawatir jika terjadi kehilangan karena setiap pengiriman sudah kami asuransikan. Kami ganti 100% sesuai harga barang.',
+    },
+    {
+        title: 'Bagaimana saya memastikan bahwa tidak ada penipuan dan telah memakai jasa impor yang terpercaya ?',
+        description: 'Kami tidak akan melakukan penagihan kepada Anda sebelum barang Anda tiba di gudang kami di Jakarta dan siap untuk dikirim.',
+    }
+];
 
 const TentangKami: NextPage = () => {
     return (
@@ -102,6 +123,17 @@ const TentangKami: NextPage = () => {
                     </div>
                     <div className="relative hidden md:block">
                         <Image src={BusinessDealImage} layout={"fill"} objectFit={'contain'} alt={'deliverinc-bisnis-deal'}/>
+                    </div>
+                </section>
+                <section className={'padding-section relative'}>
+                </section>
+                <section className="padding-section container grid gap-12 md:grid-cols-2">
+                    <div className="space-y-6">
+                        <h1 className="heading-section rose-clip-text">Frequently <br /> Asked Question</h1>
+                        <Accordion accordionData={frequentlyAskedQuestions} />
+                    </div>
+                    <div className="relative hidden md:block">
+                        <Image src={QuestionImage} layout={"fill"} objectFit={'contain'} alt={'deliverinc-bisnis-deal'}/>
                     </div>
                 </section>
             </main>

@@ -22,7 +22,7 @@
 
 @layer components {
     .rose-clip-text {
-        @apply text-transparent bg-gradient-to-b from-red-600 to-rose-400 bg-clip-text;
+        @apply text-transparent bg-gradient-to-b from-red-600 to-pink-500 bg-clip-text;
     }
 
     .link-text {
@@ -31,6 +31,32 @@
 
     .basic-transition {
         @apply transition-all duration-200 ease-in-out;
+    }
+
+    .heading-hero {
+        @apply leading-[1.2] !important;
+        @apply text-4xl lg:text-5xl xl:text-6xl font-semibold tracking-tight;
+    }
+
+    .heading-section {
+        @apply text-4xl lg:text-5xl xl:text-6xl font-bold;
+    }
+
+    .description-section {
+        @apply text-base lg:text-lg text-gray-500 tracking-tight font-light;
+    }
+
+    .description-card {
+        @apply text-gray-500 tracking-tight font-light text-sm xl:text-base;
+    }
+
+    .padding-section {
+        @apply py-12 md:py-24;
+    }
+
+    .button {
+        @apply shadow-lg shadow-red-500/50 hover:shadow-yellow-500/50 bg-gradient-to-r to-rose-600 from-rose-500
+        font-medium hover:bg-gradient-to-r hover:to-amber-500 hover:from-yellow-500 py-3 px-6 rounded text-gray-100;
     }
 }
 

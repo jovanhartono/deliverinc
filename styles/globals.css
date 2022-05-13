@@ -25,6 +25,10 @@
         @apply text-transparent bg-gradient-to-b from-red-600 to-pink-500 bg-clip-text;
     }
 
+    .amber-clip-text {
+        @apply text-transparent bg-gradient-to-b from-amber-600 to-yellow-400 bg-clip-text;
+    }
+
     .link-text {
         @apply pb-1 text-gray-500 hover:border-b hover:border-b-rose-500 hover:text-rose-500 transition-all duration-200 ease-in;
     }
@@ -51,7 +55,7 @@
     }
 
     .padding-section {
-        @apply py-12 md:py-24;
+        @apply py-12 md:py-16 lg:py-20 xl:py-24;
     }
 
     .button {

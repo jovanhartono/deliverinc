@@ -18,11 +18,11 @@ export default function Accordion({accordionData}: AccordionProps) {
                             {({open}) => (
                                 <>
                                     <Disclosure.Button
-                                        className={`${open && 'bg-rose-100'} border border-rose-200 basic-transition text-left flex items-center justify-between w-full rounded-sm p-4 font-medium text-base lg:text-lg text-gray-700 hover:bg-rose-100`}>
+                                        className={`${open && 'bg-rose-100'} border border-rose-200 basic-transition text-left flex items-center justify-between w-full rounded-sm p-4 md:font-medium text-base lg:text-lg text-gray-700 hover:bg-rose-100`}>
                                             {data.title}
                                         <div className={'ml-3'}>
                                             {
-                                                open ? <MinusIcon className={'w-6 h-6 text-gray-700'}/> : <PlusIcon className={'w-6 h-6 text-gray-700'}/>
+                                                open ? <MinusIcon className={'w-5 h-5 text-gray-700'}/> : <PlusIcon className={'w-5 h-5 text-gray-700'}/>
                                             }
 
                                         </div>

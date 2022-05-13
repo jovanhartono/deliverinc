@@ -5,12 +5,14 @@ import {ArrowRightIcon} from "@heroicons/react/outline";
 import ContainerImage from '../public/images/background/container.webp';
 import BusinessDealImage from '../public/images/background/deliverinc-bisnis.svg';
 import QuestionImage from '../public/images/background/pertanyaan.svg';
+import ChartImage from '../public/images/background/chart.svg';
 import Link from "next/link";
-import {BadgeCheckIcon, ShieldCheckIcon} from "@heroicons/react/solid";
+import {BadgeCheckIcon, PhoneIcon, ShieldCheckIcon} from "@heroicons/react/solid";
 import {Benefit, Benefits} from "../const/benefits";
 import Accordion from "../components/accordion";
+import {Achievements} from "../const/achievements";
 
-const frequentlyAskedQuestions: {title: string, description: string}[] = [
+const frequentlyAskedQuestions: { title: string, description: string }[] = [
     {
         title: 'Apa yang harus saya lakukan jika ingin impor barang ?',
         description: 'Jika anda sudah mendapatkan supplier barang yang anda inginkan dan telah melakukan transaksi, kami akan menyediakan kode marking dan alamat gudang kami untuk Anda teruskan kepada supplier. Supplier akan mengirimkan barang Anda ke gudang kami dan kami yang akan meneruskan pengiriman ke lokasi Anda.',
@@ -46,11 +48,13 @@ const TentangKami: NextPage = () => {
                                 <div className={'relative z-10 flex flex-col items-start space-y-6'}>
                                     <div className="space-y-3">
                                         <h1 className={'heading-hero text-transparent bg-clip-text from-rose-600 to-pink-600 bg-gradient-to-b'}>
-                                            Solusi Terbaik Kebutuhan Bisnis Impor Anda.
+                                            Solusi Terbaik Kebutuhan Bisnis Impor Anda
                                         </h1>
                                         <p className={'description-section'}>Kami
                                             terus
-                                            berkomitmen untuk memberikan layanan impor yang cepat dan aman bagi Anda.
+                                            berkomitmen untuk memberikan layanan impor yang <span
+                                                className={'amber-clip-text font-semibold'}>cepat</span> dan <span
+                                                className="amber-clip-text font-semibold">aman</span> bagi Anda.
                                             Kenyamanan
                                             Anda adalah yang terutama bagi kami.</p>
                                     </div>
@@ -122,19 +126,70 @@ const TentangKami: NextPage = () => {
                         </div>
                     </div>
                     <div className="relative hidden md:block">
-                        <Image src={BusinessDealImage} layout={"fill"} objectFit={'contain'} alt={'deliverinc-bisnis-deal'}/>
+                        <Image src={BusinessDealImage} layout={"fill"} objectFit={'contain'}
+                               alt={'deliverinc-bisnis-deal'}/>
                     </div>
                 </section>
-                <section className={'padding-section relative'}>
+                <section
+                    className={'padding-section relative bg-gradient-to-b from-gray-50/50 to-rose-100/20'}>
+                    <div className="container grid md:grid-cols-2 gap-12 relative z-10">
+                        <div className={'space-y-3'}>
+                            <span
+                                className={'uppercase tracking-widest text-sm font-medium text-rose-500'}>Pencapaian Kami</span>
+                            <div className="space-y-3">
+                                <div className={'flex flex-wrap heading-section'}>
+                                    <h1 className="rose-clip-text leading-[1.2]">Terus Berkembang.</h1>
+                                </div>
+                                <hr className="border border-rose-500 w-32"/>
+                                <p className={'description-section'}>Deliverinc berkomitmen untuk terus berkembang
+                                    demi melayani permintaan yang terus meningkat.</p>
+                            </div>
+                            <div className="pt-3 md:pt-12 max-w-full">
+                                <ul className={'space-x-6 flex'}>
+                                    {
+                                        Achievements.map((item: { number: string, caption: string }, index: number) => {
+                                            return (
+                                                <li key={index}>
+                                                    <h2 className={'text-3xl md:text-4xl font-semibold text-transparent bg-gradient-to-b from-amber-600 to-yellow-300 bg-clip-text'}>{item.number}</h2>
+                                                    <p className={'text-gray-500 text-xs md:text-sm tracking-tight'}>{item.caption}</p>
+                                                </li>
+                                            );
+                                        })
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="absolute right-0 bottom-0 top-1/2 left-1/3 md:left-1/2">
+                        <div className="relative h-full">
+                            <Image src={ChartImage} layout={'fill'} alt={'deliverinc-grafik-permintaan'}/>
+                        </div>
+                    </div>
                 </section>
                 <section className="padding-section container grid gap-12 md:grid-cols-2">
                     <div className="space-y-6">
-                        <h1 className="heading-section rose-clip-text">Frequently <br /> Asked Question</h1>
-                        <Accordion accordionData={frequentlyAskedQuestions} />
+                        <h1 className="heading-section rose-clip-text">Frequently <br/> Asked Question</h1>
+                        <Accordion accordionData={frequentlyAskedQuestions}/>
                     </div>
-                    <div className="relative hidden md:block">
-                        <Image src={QuestionImage} layout={"fill"} objectFit={'contain'} alt={'deliverinc-bisnis-deal'}/>
+                    <div className="flex items-start">
+                        <div className="w-full relative hidden md:block h-[500px]">
+                            <Image src={QuestionImage} layout={"fill"} objectFit={'contain'}
+                                   alt={'deliverinc-bisnis-kesepakatan'}/>
+                        </div>
                     </div>
+                </section>
+                <section className="container bg-amber-50 padding-section space-y-6 flex flex-col items-center justify-center">
+                    <h1 className="heading-section text-center rose-clip-text leading-[1.2]">Punya Pertanyaan lagi?</h1>
+                    <button className="button">
+                        <Link href={'https://wa.me/message/AE5I33MU5ZDBM1'} passHref={true}>
+                            <a target={"_blank"} rel={'noreferrer noopener'}>
+                                <div className="space-x-3 flex items-center">
+                                    <PhoneIcon className={'w-5 h-5'} />
+                                    <span>WhatsApp</span>
+                                </div>
+                            </a>
+                        </Link>
+                    </button>
                 </section>
             </main>
         </>

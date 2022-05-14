@@ -102,7 +102,7 @@ const HubungiKami: NextPage = () => {
                                 referrerPolicy="no-referrer-when-downgrade"/>
                         </div>
                     </div>
-                    <Image className={'!hidden md:block'} src={WaimakaririBackground} layout={"fill"} objectFit={'cover'} alt={'deliverinc-background-cover'}/>
+                    <Image className={'!hidden md:!block'} src={WaimakaririBackground} layout={"fill"} objectFit={'cover'} alt={'deliverinc-background-cover'}/>
                 </section>
             </main>
         </>

@@ -37,7 +37,7 @@ interface IconBox {
 }
 
 const Home: NextPage = () => {
-    const scrollRef = useRef(null);
+    const scrollRef = useRef<null | HTMLElement>(null);
     const [selectedIndex, setSelectedIndex] = useState<number>(0);
     const [swiper, setSwiper] = useState<SwiperCore>();
 
@@ -75,8 +75,7 @@ const Home: NextPage = () => {
     const [iconBoxes, setIconBoxes] = useState<IconBox[]>(dataset);
 
     function scrollIntoView(): void {
-        // @ts-ignore
-        scrollRef.current.scrollIntoView({behavior: 'smooth'});
+        scrollRef.current?.scrollIntoView({behavior: 'smooth'});
     }
 
     function setActiveIconBox(index: number): void {
@@ -99,7 +98,7 @@ const Home: NextPage = () => {
                 <meta name="description" content="Forwarder China-Indonesia Terpercaya"/>
             </Head>
             <main className={'scroll-smooth'}>
-                <div className={'h-[550px] md:min-h-screen relative flex items-center justify-around'}>
+                <section className={'h-[550px] md:min-h-screen relative flex items-center justify-around'}>
                     <div className="z-10 container">
                         <div className={'w-full sm:w-2/3 lg:w-1/2 break-words space-y-6'}>
                             <div className="space-y-3">
@@ -120,8 +119,8 @@ const Home: NextPage = () => {
                         </div>
                     </div>
                     <Image alt="Deliverinc pengiriman" src={heroImage} layout={"fill"} objectFit={"cover"}/>
-                </div>
-                <div
+                </section>
+                <section
                     className="scroll-mt-16 md:scroll-mt-24 container padding-section relative grid grid-cols-1 md:grid-cols-2 gap-12"
                     ref={scrollRef}>
                     <div className={'space-y-3 relative z-10 md:mt-6'}>
@@ -206,8 +205,8 @@ const Home: NextPage = () => {
                             <Image src={RadialGradient} alt={'deliverinc radial background'} layout={"fill"}/>
                         </div>
                     </div>
-                </div>
-                <div className={'padding-section min-h-[75vh] bg-gradient-to-br from-pink-50 via-red-50 to-rose-50'}>
+                </section>
+                <section className={'padding-section min-h-[75vh] bg-gradient-to-br from-pink-50 via-red-50 to-rose-50'}>
                     <div className="container grid grid-cols-1 gap-12">
                         <div className={'space-y-3 md:mt-6 relative z-10 text-left lg:text-center'}>
                             <h1 className={'heading-section text-gray-900'}>Layanan
@@ -239,8 +238,8 @@ const Home: NextPage = () => {
                             }
                         </div>
                     </div>
-                </div>
-                <div
+                </section>
+                <section
                     className="grid grid-cols-1 overflow-hidden md:grid-cols-2 padding-section container gap-12 relative">
                     <div className={'space-y-3 md:mt-6 relative z-10'}>
                         <span
@@ -279,7 +278,7 @@ const Home: NextPage = () => {
                             <Image src={RadialGradient2} alt={'deliverinc radial background'} layout={"fill"}/>
                         </div>
                     </div>
-                </div>
+                </section>
             </main>
         </>
     )

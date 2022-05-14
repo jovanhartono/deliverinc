@@ -16,6 +16,11 @@ export default function Header() {
         path: '/'
     }
 
+    const specialRoutes: string[] = [
+        '/tentang-kami',
+        '/hubungi-kami'
+    ];
+
     useEffect(() => {
         const scrollEvent = fromEvent(window, "scroll").pipe(distinctUntilChanged(), debounceTime(25))
             .subscribe(() => {
@@ -40,9 +45,9 @@ export default function Header() {
                 <div className={'block md:hidden w-8 h-8 flex flex-col justify-center cursor-pointer'}
                      onClick={() => setIsOpen(!isOpen)}>
                     <span
-                        className={`${isOpen ? 'rotate-45 translate-y-[2px]' : '-translate-y-1'} ${isScrolled || isOpen || router.pathname === '/tentang-kami' ? 'bg-red-600' : 'bg-gray-100'} h-[2px] transform transition-all duration-200 ease-in-out`}/>
+                        className={`${isOpen ? 'rotate-45 translate-y-[2px]' : '-translate-y-1'} ${isScrolled || isOpen || router.pathname === '/tentang-kami' ? 'bg-red-600' : 'bg-gray-100'} h-[2px] transform basic-transition`}/>
                     <span
-                        className={`${isOpen ? '-rotate-45 translate-y-0' : 'translate-y-1'} ${isScrolled || isOpen || router.pathname === '/tentang-kami' ? 'bg-red-600' : 'bg-gray-100'} h-[2px] transform transition-all duration-200 ease-in-out`}/>
+                        className={`${isOpen ? '-rotate-45 translate-y-0' : 'translate-y-1'} ${isScrolled || isOpen || router.pathname === '/tentang-kami' ? 'bg-red-600' : 'bg-gray-100'} h-[2px] transform basic-transition`}/>
                 </div>
                 <nav className={"hidden md:block"}>
                     <ul className={`list-none flex space-x-6 text-sm uppercase items-center`}>
@@ -56,7 +61,7 @@ export default function Header() {
                                                     <a className={'uppercase'}>{route.name}</a>
                                                 </button>
                                                 :
-                                                <a className={`${(router.pathname === '/tentang-kami' || isScrolled) && 'text-red-600'} basic-transition text-gray-100 link-text font-medium`}>
+                                                <a className={`${(specialRoutes.includes(router.pathname) || isScrolled) && 'text-red-600'} basic-transition text-gray-100 link-text font-medium`}>
                                                     {route.name}
                                                 </a>
                                         }

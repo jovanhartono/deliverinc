@@ -60,7 +60,7 @@ const TentangKami: NextPage = () => {
                                     </div>
                                     <button className="button flex items-center">
                                         <Link href={'/hubungi-kami'}>
-                                            <a>Hubungi Kami</a>
+                                            Hubungi Kami
                                         </Link>
                                         <ArrowRightIcon className={'inline-block h-4 w-4 ml-3'}/>
                                     </button>
@@ -115,7 +115,7 @@ const TentangKami: NextPage = () => {
                                                     <benefit.icon className={'w-6 h-6 text-gray-100'}/>
                                                 </div>
                                                 <div className="space-y-1">
-                                                    <h3 className="text-lg text-gray-700 font-medium">{benefit.title}</h3>
+                                                    <h2 className="text-lg text-gray-700 font-medium">{benefit.title}</h2>
                                                     <p className="description-card">{benefit.description}</p>
                                                 </div>
                                             </li>
@@ -178,17 +178,16 @@ const TentangKami: NextPage = () => {
                         </div>
                     </div>
                 </section>
-                <section className="container bg-amber-50 padding-section space-y-6 flex flex-col items-center justify-center">
+                <section
+                    className="container bg-amber-50 padding-section space-y-6 flex flex-col items-center justify-center">
                     <h1 className="heading-section text-center rose-clip-text leading-[1.2]">Punya Pertanyaan lagi?</h1>
                     <button className="button">
-                        <Link href={'https://wa.me/message/AE5I33MU5ZDBM1'} passHref={true}>
-                            <a target={"_blank"} rel={'noreferrer noopener'}>
-                                <div className="space-x-3 flex items-center">
-                                    <PhoneIcon className={'w-5 h-5'} />
-                                    <span>WhatsApp</span>
-                                </div>
-                            </a>
-                        </Link>
+                        <a target={"_blank"} rel={'noreferrer noopener'} href={'https://wa.me/message/AE5I33MU5ZDBM1'}>
+                            <div className="space-x-3 flex items-center">
+                                <PhoneIcon className={'w-5 h-5'}/>
+                                <span>WhatsApp</span>
+                            </div>
+                        </a>
                     </button>
                 </section>
             </main>

@@ -18,7 +18,7 @@ export default function Accordion({accordionData}: AccordionProps) {
                             {({open}) => (
                                 <>
                                     <Disclosure.Button
-                                        className={`${open && 'bg-rose-100'} border border-rose-200 basic-transition text-left flex items-center justify-between w-full rounded-sm p-4 md:font-medium text-base lg:text-lg text-gray-700 hover:bg-rose-100`}>
+                                        className={`${open && 'bg-rose-100'} tracking-tight border border-rose-200 basic-transition text-left flex items-center justify-between w-full rounded-sm p-4 md:font-medium text-base lg:text-lg text-gray-700 hover:bg-rose-100`}>
                                             {data.title}
                                         <div className={'ml-3'}>
                                             {

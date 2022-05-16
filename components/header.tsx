@@ -18,7 +18,8 @@ export default function Header() {
 
     const specialRoutes: string[] = [
         '/tentang-kami',
-        '/hubungi-kami'
+        '/hubungi-kami',
+        '/cek-harga'
     ];
 
     useEffect(() => {
@@ -38,16 +39,16 @@ export default function Header() {
             <div
                 className={`container justify-between items-center flex h-20 md:h-24`}>
                 <Link href="/" passHref={true}>
-                    <div onClick={() => setIsOpen(false)} className={'w-20 md:w-32 cursor-pointer'}>
-                        <Image alt="Logo Deliverinc" src={logo}/>
+                    <div onClick={() => setIsOpen(false)} className={'relative w-20 h-full md:w-32 cursor-pointer'}>
+                        <Image alt="Logo Deliverinc" src={logo} layout={'fill'} objectFit={'contain'}/>
                     </div>
                 </Link>
                 <div className={'block md:hidden w-8 h-8 flex flex-col justify-center cursor-pointer'}
                      onClick={() => setIsOpen(!isOpen)}>
                     <span
-                        className={`${isOpen ? 'rotate-45 translate-y-[2px]' : '-translate-y-1'} ${isScrolled || isOpen || router.pathname === '/tentang-kami' ? 'bg-red-600' : 'bg-gray-100'} h-[2px] transform basic-transition`}/>
+                        className={`${isOpen ? 'rotate-45 translate-y-[2px]' : '-translate-y-1'} ${isScrolled || isOpen || specialRoutes.includes(router.pathname) ? 'bg-red-600' : 'bg-gray-100'} h-[2px] transform basic-transition`}/>
                     <span
-                        className={`${isOpen ? '-rotate-45 translate-y-0' : 'translate-y-1'} ${isScrolled || isOpen || router.pathname === '/tentang-kami' ? 'bg-red-600' : 'bg-gray-100'} h-[2px] transform basic-transition`}/>
+                        className={`${isOpen ? '-rotate-45 translate-y-0' : 'translate-y-1'} ${isScrolled || isOpen || specialRoutes.includes(router.pathname) ? 'bg-red-600' : 'bg-gray-100'} h-[2px] transform basic-transition`}/>
                 </div>
                 <nav className={"hidden md:block"}>
                     <ul className={`list-none flex space-x-6 text-sm uppercase items-center`}>
@@ -58,12 +59,12 @@ export default function Header() {
                                         {
                                             index === Routes.length - 1 ?
                                                 <button className="button">
-                                                    <a className={'uppercase'}>{route.name}</a>
+                                                    <span className={'uppercase'}>{route.name}</span>
                                                 </button>
                                                 :
-                                                <a className={`${(specialRoutes.includes(router.pathname) || isScrolled) && 'text-red-600'} basic-transition text-gray-100 link-text font-medium`}>
+                                                <span className={`${(specialRoutes.includes(router.pathname) || isScrolled) && 'text-red-600'} ${router.pathname === route.path && 'pb-1 border-b border-b-rose-500'} cursor-pointer basic-transition text-gray-100 link-text font-medium`}>
                                                     {route.name}
-                                                </a>
+                                                </span>
                                         }
                                     </Link>
                                 </li>

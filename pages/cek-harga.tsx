@@ -59,6 +59,11 @@ interface Volume {
     length: number;
 }
 
+enum ShippingType {
+    AIR_FREIGHT = 'Air Freight',
+    OCEAN_FREIGHT = 'Ocean Freight'
+}
+
 const CekHarga: NextPage = () => {
     const [shipping, setShipping] = useState<string>('');
     const [category, setCategory] = useState<string>('');
@@ -67,17 +72,30 @@ const CekHarga: NextPage = () => {
     const [weight, setWeight] = useState<number>(0);
     const [price, setPrice] = useState<number>(0);
 
+    function getVolume(volume: Volume): number {
+        return volume.height * volume.length * volume.width / 1000000;
+    }
+
     function getTotalVolume(volume: Volume, quantity: number): string {
-        const convertedVolume = volume.length * volume.height * volume.width / 1000000;
+        const convertedVolume = getVolume(volume);
         return isNaN(convertedVolume * quantity) ? '0' : `${(convertedVolume * quantity)} M³`;
     }
 
-    function countTotalPrice(shipping: string, category: string, volume: Volume, weight: number, quantity: number): number {
-        const volumeValue = volume.height * volume.width * volume.length / 1000000;
-        const categoryValue: number = Category.find(c => c.category === category)?.basePrice ?? 0;
-        const shippingValue = Shipping.find(s => s.service === shipping)?.basePrice ?? 0;
+    function countTotalPrice(shippingType: ShippingType, category: string, volume: Volume, weight: number, quantity: number): number {
+        let totalPrice = 0;
+        const basePrice = Shipping.find(s => s.service === shippingType)?.basePrice ?? 0;
 
-        return volumeValue * categoryValue * shippingValue * quantity;
+        if (shippingType === ShippingType.OCEAN_FREIGHT) {
+            const volumeValue = getVolume(volume);
+            const categoryValue: number = Category.find(c => c.category === category)?.basePrice ?? 0;
+
+            totalPrice = volumeValue * categoryValue * basePrice * quantity;
+        }
+        else if (shippingType === ShippingType.AIR_FREIGHT) {
+            totalPrice = basePrice * weight;
+        }
+
+        return isNaN(totalPrice) ? 0 : totalPrice;
     }
 
     function preventCharactersInput(e: KeyboardEvent<HTMLInputElement>): void {
@@ -87,7 +105,13 @@ const CekHarga: NextPage = () => {
     }
 
     useEffect(() => {
-        setPrice(countTotalPrice(shipping, category, volume, weight, quantity));
+        if (shipping === 'Air Freight') {
+            setPrice(countTotalPrice(ShippingType.AIR_FREIGHT, category, volume, weight, quantity));
+        }
+        else if (shipping === 'Ocean Freight') {
+            setPrice(countTotalPrice(ShippingType.OCEAN_FREIGHT, category, volume, weight, quantity));
+        }
+
     }, [shipping, category, volume, weight, quantity]);
 
     return (
@@ -217,7 +241,7 @@ const CekHarga: NextPage = () => {
                                 <div className="space-y-3">
                                     <p className={'text-gray-700 text-xl font-medium'}>Total Volume (M<sup>3</sup>)</p>
                                     <input
-                                        className={'input-form read-only:bg-rose-500 read-only:text-gray-100'}
+                                        className={`${shipping === 'Ocean Freight' && 'read-only:bg-rose-500 read-only:text-gray-100'} input-form`}
                                         readOnly={true}
                                         value={getTotalVolume(volume, quantity)}
                                         type={"text"}
@@ -226,9 +250,9 @@ const CekHarga: NextPage = () => {
                                 <div className="space-y-3">
                                     <p className={'text-gray-700 text-xl font-medium'}>Total Harga</p>
                                     <input
-                                        className={'input-form read-only:bg-red-600 read-only:text-gray-100'}
+                                        className={'input-form read-only:bg-rose-500 read-only:text-gray-100'}
                                         readOnly={true}
-                                        value={countTotalPrice(shipping, category, volume, weight, quantity)}
+                                        value={`Rp ${price.toLocaleString('id')},00`}
                                         type={"text"}
                                     />
                                 </div>

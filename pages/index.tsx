@@ -118,7 +118,7 @@ const Home: NextPage = () => {
                             </button>
                         </div>
                     </div>
-                    <Image alt="Deliverinc pengiriman" src={heroImage} layout={"fill"} objectFit={"cover"}/>
+                    <Image alt="Deliverinc pengiriman" priority={true} src={heroImage} layout={"fill"} objectFit={"cover"}/>
                 </section>
                 <section
                     className="scroll-mt-16 md:scroll-mt-24 container padding-section relative grid grid-cols-1 md:grid-cols-2 gap-12"

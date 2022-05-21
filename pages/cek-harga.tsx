@@ -153,7 +153,7 @@ const CekHarga: NextPage = () => {
                         </div>
                         <div
                             className="relative min-h-[350px] md:min-h-[450px] xl:min-h-[550px] rounded-lg overflow-hidden">
-                            <Image src={WarehouseImage} layout={'fill'} objectFit={"cover"}
+                            <Image src={WarehouseImage} layout={'fill'} objectFit={"cover"} priority={true}
                                    alt={'Deliverinc-hubungi-kami'}/>
                         </div>
                     </div>

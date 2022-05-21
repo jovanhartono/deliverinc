@@ -81,7 +81,7 @@ const TentangKami: NextPage = () => {
                                 </div>
                             </div>
                             <div
-                                className="min-h-[350px] lg:min-h-[550px] h-full relative rounded-lg overflow-hidden shadow-lg">
+                                className="min-h-[350px] md:min-h-[450px] xl:min-h-[550px] h-full relative rounded-lg overflow-hidden shadow-lg">
                                 <Image src={ContainerImage} layout={"fill"} objectFit={"cover"}
                                        alt={'Deliverinc Container'}
                                        objectPosition={"bottom"}/>

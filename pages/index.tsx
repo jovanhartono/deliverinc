@@ -1,6 +1,6 @@
 import type {NextPage} from 'next'
 import Image, {StaticImageData} from 'next/image';
-import heroImage from '../public/images/heroimages.webp';
+import heroImage from '../public/images/background/heroimages.webp';
 import DeliveredOrderImage from '../public/images/deliverinc-order-sampai.svg';
 import ConsultationImage from '../public/images/deliverinc-konsultasi.svg';
 import ConfirmationOrderImage from '../public/images/deliverinc-konfirmasi-order.svg';
@@ -12,8 +12,8 @@ import {
     ThumbUpIcon
 } from "@heroicons/react/outline";
 import {ComponentProps, useRef, useState} from "react";
-import RadialGradient from '../public/images/radial-gradient.svg';
-import RadialGradient2 from '../public/images/radial-gradient-2.svg';
+import RadialGradient from '../public/images/gradients/radial-gradient.svg';
+import RadialGradient2 from '../public/images/gradients/radial-gradient-2.svg';
 import Head from "next/head";
 import SwiperCore, {Autoplay, Pagination} from "swiper";
 import {Swiper, SwiperSlide} from 'swiper/react';

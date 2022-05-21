@@ -19,7 +19,6 @@ export default function Header() {
     const specialRoutes: string[] = [
         '/tentang-kami',
         '/hubungi-kami',
-        '/cek-harga'
     ];
 
     useEffect(() => {
@@ -40,7 +39,7 @@ export default function Header() {
                 className={`container justify-between items-center flex h-20 md:h-24`}>
                 <Link href="/" passHref={true}>
                     <div onClick={() => setIsOpen(false)} className={'relative w-20 h-full md:w-32 cursor-pointer'}>
-                        <Image alt="Logo Deliverinc" src={logo} layout={'fill'} objectFit={'contain'}/>
+                        <Image alt="Logo Deliverinc" src={logo} layout={'fill'} objectFit={'cover'}/>
                     </div>
                 </Link>
                 <div className={'block md:hidden w-8 h-8 flex flex-col justify-center cursor-pointer'}

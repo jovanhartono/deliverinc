@@ -24,7 +24,6 @@ export default function Accordion({accordionData}: AccordionProps) {
                                             {
                                                 open ? <MinusIcon className={'w-5 h-5 text-gray-700'}/> : <PlusIcon className={'w-5 h-5 text-gray-700'}/>
                                             }
-
                                         </div>
                                     </Disclosure.Button>
                                     <Disclosure.Panel className={`description-card p-3`}>

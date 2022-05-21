@@ -23,7 +23,7 @@ const HubungiKami: NextPage = () => {
                         <div className={'space-y-6'}>
                             <div className="space-y-3">
                                 <h1 className={'heading-hero text-transparent bg-clip-text from-rose-600 to-pink-600 bg-gradient-to-b'}>
-                                    Hubungi Kami Dimanapun. Kapanpun.
+                                    Hubungi Kami. <br/>Dimanapun. <br/>Kapanpun.
                                 </h1>
                                 <p className={'description-section'}>Staff kami dengan senang hati membantu anda dengan
                                     pelayanan <span
@@ -36,8 +36,8 @@ const HubungiKami: NextPage = () => {
                                 <ArrowDownIcon className={'inline-block h-4 w-4 ml-3'}/>
                             </button>
                         </div>
-                        <div className="relative min-h-[350px] lg:min-h-[550px]">
-                            <Image src={HeroBackground} layout={'fill'} objectFit={"contain"}
+                        <div className="relative min-h-[300px] md:min-h-[350px] lg:min-h-[400px] xl:min-h-[450px]">
+                            <Image src={HeroBackground} layout={'fill'} objectFit={"contain"} objectPosition={'top'}
                                    alt={'Deliverinc-hubungi-kami'}/>
                         </div>
                     </div>

@@ -73,7 +73,7 @@ const HubungiKami: NextPage = () => {
                                         </a>
                                     </li>
                                     <li>
-                                        <a href={'mailto:deliverinc.id@gmail.com'} target={'_blank'}
+                                        <a href={'https://www.google.com/maps/dir//deliverinc/@-6.1721938,106.7155555,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2e69f1232b348385:0xbcb88b1ec3a2af86!2m2!1d106.7821273!2d-6.2212923'} target={'_blank'}
                                            rel="noopener noreferrer">
                                             <div className={'flex space-x-3 items-center cursor-pointer'}>
                                                 <LocationMarkerIcon className={'w-6 h-6 text-white'}/>

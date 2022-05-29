@@ -67,6 +67,10 @@
         font-medium hover:bg-gradient-to-r hover:to-amber-500 hover:from-yellow-500 py-3 px-6 rounded text-gray-100;
     }
 
+    .heading-tracking {
+        @apply text-base md:text-lg tracking-wider uppercase rose-clip-text font-semibold
+    }
+
     .input-form {
         @apply placeholder:text-sm placeholder:tracking-tight placeholder:font-light placeholder:xl:text-base
         focus:border-rose-500 focus:ring-0

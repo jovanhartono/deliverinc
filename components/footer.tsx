@@ -74,20 +74,16 @@ export default function Footer() {
                     <h2 className={`rose-clip-text text-xl font-medium`}>Location</h2>
                     <ul className={'font-light text-sm tracking-tight space-y-3'}>
                         <li>
-                            <Link
-                                href={'https://www.google.com/maps/dir/-6.1063392,106.7824432/deliverinc/@-6.1689802,106.715551,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x2e69f1232b348385:0xbcb88b1ec3a2af86!2m2!1d106.7821273!2d-6.2212923'}>
-                                <a target="_blank" rel="noopener noreferrer" className="link-text">PT. Deliverinc
-                                    Ekspresindo Sukses Jaya</a>
-                            </Link>
+                            <a href={'https://www.google.com/maps/dir//deliverinc/@-6.1721938,106.7155555,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2e69f1232b348385:0xbcb88b1ec3a2af86!2m2!1d106.7821273!2d-6.2212923'}
+                               target="_blank" rel="noopener noreferrer" className="link-text">PT. Deliverinc
+                                Ekspresindo Sukses Jaya</a>
                         </li>
                         <li>
-                            <Link passHref={true}
-                                  href={'https://www.google.com/maps/dir/-6.1063392,106.7824432/deliverinc/@-6.1689802,106.715551,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x2e69f1232b348385:0xbcb88b1ec3a2af86!2m2!1d106.7821273!2d-6.2212923'}>
-                                <a target="_blank" rel="noopener noreferrer"
-                                   className={'text-gray-500 border-b border-b-gray-500 hover:border-b-rose-500 transition-all duration-200'}>
-                                    Bellezza BSA 1st Floor Unit 106 Permata Hijau Keb. Lama Jakarta Selatan 12210
-                                </a>
-                            </Link>
+                            <a target="_blank" rel="noopener noreferrer"
+                               href={'https://www.google.com/maps/dir//deliverinc/@-6.1721938,106.7155555,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2e69f1232b348385:0xbcb88b1ec3a2af86!2m2!1d106.7821273!2d-6.2212923'}
+                               className={'text-gray-500 border-b border-b-gray-500 hover:border-b-rose-500 transition-all duration-200'}>
+                                Bellezza BSA 1st Floor Unit 106 Permata Hijau Keb. Lama Jakarta Selatan 12210
+                            </a>
                         </li>
                     </ul>
                 </div>

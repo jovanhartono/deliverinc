@@ -196,7 +196,7 @@ const CekHarga: NextPage = () => {
                                         onChange={(e: ChangeEvent<HTMLInputElement>) => setQuantity(parseInt(e.target.value))}/>
                                 </div>
                             </div>
-                            <div>
+                            <div className={'space-y-3'}>
                                 <p className={'text-gray-700 text-xl font-medium'}>Ukuran (CM)</p>
                                 <div className="space-x-1 md:space-x-3 flex">
                                     <input

@@ -19,6 +19,7 @@ export default function Header() {
     const specialRoutes: string[] = [
         '/tentang-kami',
         '/hubungi-kami',
+        '/cek-resi'
     ];
 
     useEffect(() => {

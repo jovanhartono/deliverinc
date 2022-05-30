@@ -17,12 +17,12 @@ export type Service = {
 export const Services: Service[] = [
     {
         icon: CubeIcon,
-        title: 'Ocean Fright - LCL',
+        title: 'Ocean Freight - LCL',
         description: 'Less than Container Load adalah pengiriman impor melalui jalur laut dengan jumlah minimal 0.1 CBM dengan durasi pengiriman 25-30 hari. Kurangi biaya bisnis impor dengan penawaran harga kompetitif dari kami dengan bantuan Tax Refund atau Customs Clearance.'
     },
     {
         icon: CubeIcon,
-        title: 'Ocean Fright - FCL',
+        title: 'Ocean Freight - FCL',
         description: 'Full Container Load adalah pengiriman impor melalui jalur laut dalam satu kontainer penuh khusus untuk barang Anda. Kontainer tersedia dengan muatan sampai dengan 78 cbm dengan bantuan Tax Refund atau Customs Clearance.'
     },
     {

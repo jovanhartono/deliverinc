@@ -14,7 +14,18 @@ export type CategoryService = {
     basePrice: number;
 }
 
-const Category: CategoryService[] = [
+const AirCategory: CategoryService[] = [
+    {
+        category: 'Kategori 1',
+        basePrice: 270000
+    },
+    {
+        category: 'Kategori 2',
+        basePrice: 285000
+    }
+]
+
+const OceanCategory: CategoryService[] = [
     {
         category: 'Material Plastik',
         basePrice: 5000000
@@ -72,6 +83,19 @@ const CekHarga: NextPage = () => {
     const [weight, setWeight] = useState<number>(0);
     const [price, setPrice] = useState<number>(0);
 
+    function getShippingCategory(shipping: string): CategoryService[] {
+        if (shipping === 'Air Freight') {
+            return AirCategory;
+        }
+        else if (shipping === 'Ocean Freight') {
+            return OceanCategory;
+        }
+        else {
+            return [{category: '', basePrice: 0}]
+
+        }
+    }
+
     function getVolume(volume: Volume): number {
         return volume.height * volume.length * volume.width / 1000000;
     }
@@ -87,12 +111,14 @@ const CekHarga: NextPage = () => {
 
         if (shippingType === ShippingType.OCEAN_FREIGHT) {
             const volumeValue = getVolume(volume);
-            const categoryValue: number = Category.find(c => c.category === category)?.basePrice ?? 0;
+            const categoryValue: number = OceanCategory.find(c => c.category === category)?.basePrice ?? 0;
 
             totalPrice = volumeValue * categoryValue * basePrice * quantity;
         }
         else if (shippingType === ShippingType.AIR_FREIGHT) {
-            totalPrice = basePrice * weight;
+            const categoryValue: number = AirCategory.find(c => c.category === category)?.basePrice ?? 0;
+
+            totalPrice = basePrice * weight * categoryValue;
         }
 
         return isNaN(totalPrice) ? 0 : totalPrice;
@@ -171,7 +197,7 @@ const CekHarga: NextPage = () => {
                                 <div className="space-y-3">
                                     <p className={'text-gray-700 text-xl font-medium'}>Jenis Barang</p>
                                     <Dropdown selectedKey={setCategory} labelProps={'Pilih Jenis Barang'}
-                                              options={Category.map((category: CategoryService) => category.category)}/>
+                                              options={getShippingCategory(shipping).map((category: CategoryService) => category.category)}/>
                                 </div>
                             </div>
                             <div className="grid md:grid-cols-2 gap-6">

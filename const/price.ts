@@ -6,7 +6,7 @@ export type Shipment = {
 export const Shipping: Shipment[] = [
     {
         service: 'Air Freight',
-        basePrice: 265000
+        basePrice: 1
     },
     {
         service: 'Ocean Freight',

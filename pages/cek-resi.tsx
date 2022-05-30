@@ -106,33 +106,8 @@ const CekResi: NextPage = () => {
                       content="Tentang Kami - Deliverinc Importir dan Forwarder China Indonesia Terpercaya"/>
             </Head>
             <main>
-                <section className="padding-section">
-                    <div className="container grid md:grid-cols-2 gap-12 pt-12">
-                        <div className={'space-y-6'}>
-                            <div className="space-y-3">
-                                <h1 className={'heading-hero text-transparent bg-clip-text from-rose-600 to-pink-600 bg-gradient-to-b'}>
-                                    Periksa Status <br/> Pengiriman Anda <br/> dengan Mudah. <br/>
-                                </h1>
-                                <p className={'description-section'}>Masukkan nomor resi pengiriman anda dibawah ini dan
-                                    sistem kami akan mengecek secara <span
-                                        className={'amber-clip-text font-semibold'}>langsung</span> lokasi paket
-                                    kesayangan anda.</p>
-                            </div>
-                            <button className="button flex items-center"
-                                    onClick={() => scrollRef.current?.scrollIntoView({behavior: 'smooth'})}>
-                                Lokasi Kami
-                                <ArrowDownIcon className={'inline-block h-4 w-4 ml-3'}/>
-                            </button>
-                        </div>
-                        <div
-                            className="relative min-h-[350px] md:min-h-[450px] xl:min-h-[550px] rounded-lg overflow-hidden shadow-lg">
-                            <Image src={HeroBackground} layout={'fill'} objectFit={"cover"}
-                                   alt={'Deliverinc-hubungi-kami'}/>
-                        </div>
-                    </div>
-                </section>
-                <section className="container padding-section min-h-[75vh] grid gap-12 md:grid-cols-2">
-                    <div className={'space-y-6'}>
+                <section className="container padding-section grid gap-12 md:grid-cols-2">
+                    <div className={'space-y-6 pt-12'}>
                         <div className={'space-y-3'}>
                             <span
                                 className={'uppercase tracking-widest text-sm font-medium text-rose-500'}>Cek resi</span>
@@ -243,6 +218,26 @@ const CekResi: NextPage = () => {
                     <div className="relative min-h-[300px] md:min-h-[350px] lg:min-h-[400px] xl:min-h-[450px]">
                         <Image src={TrackingImage} layout={'fill'} objectFit={"contain"} objectPosition={'top'}
                                alt={'Deliverinc-hubungi-kami'}/>
+                    </div>
+                </section>
+                <section className="padding-section">
+                    <div className="container grid md:grid-cols-2 gap-12">
+                        <div className={'space-y-6'}>
+                            <div className="space-y-3">
+                                <h1 className={'heading-hero text-transparent bg-clip-text from-rose-600 to-pink-600 bg-gradient-to-b'}>
+                                    Periksa Status <br/> Pengiriman Anda <br/> dengan Mudah. <br/>
+                                </h1>
+                                <p className={'description-section'}>Masukkan nomor resi pengiriman anda dibawah ini dan
+                                    sistem kami akan mengecek secara <span
+                                        className={'amber-clip-text font-semibold'}>langsung</span> lokasi paket
+                                    kesayangan anda.</p>
+                            </div>
+                        </div>
+                        <div
+                            className="relative min-h-[350px] md:min-h-[450px] xl:min-h-[550px] rounded-lg overflow-hidden shadow-lg">
+                            <Image src={HeroBackground} layout={'fill'} objectFit={"cover"}
+                                   alt={'Deliverinc-hubungi-kami'}/>
+                        </div>
                     </div>
                 </section>
             </main>

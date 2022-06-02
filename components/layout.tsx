@@ -1,5 +1,6 @@
 import Header from "./header";
 import Footer from "./footer";
+import WhatsappFloating from "./whatsapp-floating";
 
 export default function Layout({children}: { children: React.ReactNode }) {
     return (
@@ -8,6 +9,7 @@ export default function Layout({children}: { children: React.ReactNode }) {
             <div>
                 {children}
             </div>
+            <WhatsappFloating />
             <Footer/>
         </div>
     );

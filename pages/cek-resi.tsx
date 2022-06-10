@@ -93,7 +93,8 @@ const CekResi: NextPage = () => {
 
     async function fetchPackageStatus(receiptNumber: string) {
         setError(false);
-        const res = await fetch(`https://backstage-deliverinc.herokuapp.com/api/receipts?filters[receiptNumber][$eq]=${receiptNumber}&populate=%2A`)
+        // const res = await fetch(`https://backstage-deliverinc.herokuapp.com/api/receipts?filters[receiptNumber][$eq]=${receiptNumber}&populate=%2A`)
+        const res = await fetch(`https://deliverinc.herokuapp.com/api/receipt/${receiptNumber}`)
 
         return await res.json();
     }

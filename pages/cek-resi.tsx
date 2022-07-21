@@ -1,10 +1,9 @@
 import {NextPage} from "next";
 import Head from 'next/head';
-import {ArrowDownIcon} from "@heroicons/react/outline";
 import Image from "next/image";
 import HeroBackground from "../public/images/background/cargo-2.jpg";
 import TrackingImage from '../public/images/background/tracking.svg';
-import {ChangeEvent, KeyboardEvent, useRef, useState} from "react";
+import {ChangeEvent, KeyboardEvent, useState} from "react";
 import {SearchIcon} from "@heroicons/react/solid";
 import dayjs from "dayjs";
 import 'dayjs/locale/id';
@@ -59,7 +58,6 @@ export interface OrderStatus {
 }
 
 const CekResi: NextPage = () => {
-    const scrollRef = useRef<null | HTMLElement>(null);
     const [receiptNumber, setReceiptNumber] = useState<string>('');
     const [error, setError] = useState<boolean>(false);
     const [data, setData] = useState<OrderStatus | undefined>(undefined);
@@ -93,7 +91,6 @@ const CekResi: NextPage = () => {
 
     async function fetchPackageStatus(receiptNumber: string) {
         setError(false);
-        // const res = await fetch(`https://backstage-deliverinc.herokuapp.com/api/receipts?filters[receiptNumber][$eq]=${receiptNumber}&populate=%2A`)
         const res = await fetch(`https://deliverinc.herokuapp.com/api/receipt/${receiptNumber}`)
 
         return await res.json();

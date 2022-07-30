@@ -17,7 +17,11 @@ export const Routes: Route[] = [
         path: "/cek-harga",
     },
     {
-        name: "Hubungi Kami",
-        path: "/hubungi-kami",
+        name: "Jasa Pembelian",
+        path: "/jasa-pembelian"
     },
+    {
+        name: "Hubungi Kami",
+        path: "/hubungi-kami"
+    }
 ];

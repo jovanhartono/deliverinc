@@ -19,7 +19,8 @@ export default function Header() {
     const specialRoutes: string[] = [
         '/tentang-kami',
         '/hubungi-kami',
-        '/cek-resi'
+        '/cek-resi',
+        '/jasa-pembelian'
     ];
 
     useEffect(() => {
@@ -62,7 +63,7 @@ export default function Header() {
                                                     <span className={'uppercase'}>{route.name}</span>
                                                 </button>
                                                 :
-                                                <span className={`${(specialRoutes.includes(router.pathname) || isScrolled) && 'text-red-600'} ${router.pathname === route.path && 'pb-1 border-b border-b-rose-500'} cursor-pointer basic-transition text-gray-100 link-text font-medium`}>
+                                                <span className={`${(specialRoutes.includes(router.pathname) || isScrolled) && 'text-red-600'} ${router.pathname === route.path && 'pb-1 border-b border-b-rose-500'} cursor-pointer basic-transition text-gray-100 link-text font-medium whitespace-nowrap`}>
                                                     {route.name}
                                                 </span>
                                         }

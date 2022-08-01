@@ -1,9 +1,13 @@
 import {NextPage} from "next";
 import Head from "next/head";
 import {BadgeCheckIcon, ShieldCheckIcon, TranslateIcon} from "@heroicons/react/solid";
-import Image from "next/image";
+import Image, {StaticImageData} from "next/image";
 import PaymentImage from "../public/images/background/payment.webp";
 import BusinessDealImage from "../public/images/deliverinc-transaksi.svg";
+import QuickChatImage from '../public/images/deliverinc-quick-chat.svg';
+import SearchingImage from '../public/images/deliverinc-pencarian-supplier.svg';
+import ContainerImage from '../public/images/deliverinc-pengiriman-kontainer.svg';
+import DealImage from '../public/images/deliverinc-setuju.svg';
 import {CashIcon, CreditCardIcon, SearchIcon} from "@heroicons/react/outline";
 
 const JasaPembelian: NextPage = () => {
@@ -28,6 +32,29 @@ const JasaPembelian: NextPage = () => {
             title: 'Ongkos Terjangkau',
             description: 'Menjawab permasalahan impor yang sulit dengan biaya yang terjangkau.'
         },
+    ];
+
+    const BuyingSteps: {title: string, description: string, image: StaticImageData}[] = [
+        {
+            title: 'Konsultasi',
+            description: 'Customer melakukan konsultasi dengan tim jasa belanja Deliverinc mengenai produk yang dicari beserta spesifikasi barang',
+            image: QuickChatImage
+        },
+        {
+            title: 'Pencarian Barang',
+            description: 'Deliverinc melakukan pencarian barang dan dealing harga dengan supplier. Kami juga membuatkan perhitungan estimasi modal yang dibutuhkan customer.',
+            image: SearchingImage
+        },
+        {
+            title: 'Deal dan Transaksi',
+            description: 'Jika setuju dengan perhitungan tersebut, silahkan lakukan pembayaran total harga barang sesuai nilai invoice yang diberikan',
+            image: DealImage
+        },
+        {
+            title: 'Shipping',
+            description: 'Supplier mengkonfirmasi pemesanan barang dan mengirimkan barang ke gudang Deliverinc di China',
+            image: ContainerImage
+        }
     ]
 
     return (
@@ -101,7 +128,7 @@ const JasaPembelian: NextPage = () => {
                         </div>
                     </div>
                 </section>
-                <section className="padding-section container grid md:grid-cols-2 gap-12 min-h-[75vh]">
+                <section className="padding-section container grid md:grid-cols-2 gap-12">
                     <div className="space-y-6">
                         <div className="space-y-3">
                             <span
@@ -110,9 +137,9 @@ const JasaPembelian: NextPage = () => {
                                 Pembelian</h1>
                             <hr className="border border-rose-500 w-32"/>
                         </div>
-                        <p className={'description-section'}>Telah melayani ribuan pelanggan dengan tingkat kepuasan
-                            maksimal. Kami berkomitmen untuk terus maju dan memberikan akses pelayanan yang
-                            terbaik.</p>
+                        <p className={'description-section'}>Mempermudah anda dalam melakukan impor barang dari China.
+                            Cukup beritahu kami barang yang diinginkan, maka staff kami akan mengurusnya hingga
+                            tuntas.</p>
                         <div className="grid lg:grid-cols-2 lg:grid-rows-2 gap-6">
                             {
                                 ServiceAdvantage.map((item, index: number) => {
@@ -137,6 +164,30 @@ const JasaPembelian: NextPage = () => {
                     <div className="relative hidden md:block">
                         <Image src={BusinessDealImage} layout={"fill"} objectFit={'contain'}
                                alt={'deliverinc-transaksi'}/>
+                    </div>
+                </section>
+                <section className="padding-section bg-gradient-to-b from-gray-50/50 to-rose-100/20">
+                    <div className="container">
+                        <h1 className="heading-section font-semibold rose-clip-text tracking-tight text-center mb-24 leading-[1.2]">Langkah-langkah
+                            Jasa Pembelian</h1>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                            {
+                                BuyingSteps.map((item, index: number) => {
+                                    return (
+                                        <div className="relative hover:shadow-md basic-transition shadow border border-gray-100 rounded p-4 flex flex-col items-center" key={index}>
+                                            <div className="relative w-48 h-32 xl:-top-5 xl:-mt-10">
+                                                <Image src={item.image} layout={"fill"} objectPosition={"center"}
+                                                       objectFit={"contain"} alt={'deliverinc-quick-chat'}/>
+                                            </div>
+                                            <div className="space-y-1 mt-6">
+                                                <h3 className={'text-gray-700 tracking-tight text-xl font-medium'}>{index + 1}. {item.title}</h3>
+                                                <p className={'description-card'}>{item.description}</p>
+                                            </div>
+                                        </div>
+                                    );
+                                })
+                            }
+                        </div>
                     </div>
                 </section>
             </main>

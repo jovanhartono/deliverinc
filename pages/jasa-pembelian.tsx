@@ -8,6 +8,11 @@ import QuickChatImage from '../public/images/deliverinc-quick-chat.svg';
 import SearchingImage from '../public/images/deliverinc-pencarian-supplier.svg';
 import ContainerImage from '../public/images/deliverinc-pengiriman-kontainer.svg';
 import DealImage from '../public/images/deliverinc-setuju.svg';
+import AlibabaLogo from '../public/images/logo/alibaba-logo.svg';
+import JDLogo from '../public/images/logo/jd-logo.webp';
+import TaobaoLogo from '../public/images/logo/taobao-logo.svg';
+import SixteenLogo from '../public/images/logo/1688-logo.webp';
+import AliExpressLogo from '../public/images/logo/aliexpress-logo.svg';
 import {CashIcon, CreditCardIcon, SearchIcon} from "@heroicons/react/outline";
 
 const JasaPembelian: NextPage = () => {
@@ -34,7 +39,7 @@ const JasaPembelian: NextPage = () => {
         },
     ];
 
-    const BuyingSteps: {title: string, description: string, image: StaticImageData}[] = [
+    const BuyingSteps: { title: string, description: string, image: StaticImageData }[] = [
         {
             title: 'Konsultasi',
             description: 'Customer melakukan konsultasi dengan tim jasa belanja Deliverinc mengenai produk yang dicari beserta spesifikasi barang',
@@ -174,7 +179,9 @@ const JasaPembelian: NextPage = () => {
                             {
                                 BuyingSteps.map((item, index: number) => {
                                     return (
-                                        <div className="relative hover:shadow-md basic-transition shadow border border-gray-100 rounded p-4 flex flex-col items-center" key={index}>
+                                        <div
+                                            className="relative hover:shadow-md basic-transition shadow border border-gray-100 rounded p-4 flex flex-col items-center"
+                                            key={index}>
                                             <div className="relative w-48 h-32 xl:-top-5 xl:-mt-10">
                                                 <Image src={item.image} layout={"fill"} objectPosition={"center"}
                                                        objectFit={"contain"} alt={'deliverinc-quick-chat'}/>
@@ -187,6 +194,37 @@ const JasaPembelian: NextPage = () => {
                                     );
                                 })
                             }
+                        </div>
+                    </div>
+                </section>
+                <section className={'container padding-section'}>
+                    <h1 className={'text-4xl lg:text-5xl xl:text-6xl text-rose-600 font-medium tracking-tighter w-full lg:w-2/3'}>Melayani Pembelian dari Berbagai
+                        Marketplace China.</h1>
+                    <div className="grid md:grid-cols-2 xl:grid-cols-3 mt-12">
+                        <div className="min-h-[300px] lg:min-h-[400px] p-6 from-amber-200 to-orange-300 bg-gradient-to-tr flex items-center">
+                            <div className="relative w-full h-64">
+                                <Image alt={'alibaba-logo'} src={AlibabaLogo} layout={"fill"} objectFit={'cover'} objectPosition={"center"} />
+                            </div>
+                        </div>
+                        <div className="min-h-[300px] lg:min-h-[400px] p-6 bg-gradient-to-tr from-rose-500 to-red-500 flex items-center">
+                            <div className="relative w-full h-64">
+                                <Image alt={'jd.com-logo'} src={JDLogo} layout={"fill"} objectFit={'cover'} />
+                            </div>
+                        </div>
+                        <div className="min-h-[300px] lg:min-h-[400px] p-6 bg-orange-500 flex items-center flex items-center">
+                            <div className="relative w-full h-64">
+                                <Image alt={'taobao-logo'} src={TaobaoLogo} layout={"fill"} objectFit={'cover'} />
+                            </div>
+                        </div>
+                        <div className="min-h-[300px] lg:min-h-[400px] p-6 bg-rose-100 flex items-center flex items-center">
+                            <div className="relative w-full h-64">
+                                <Image alt={'aliexpress-logo'} src={AliExpressLogo} layout={"fill"} objectFit={'cover'} />
+                            </div>
+                        </div>
+                        <div className="min-h-[300px] lg:min-h-[400px] p-6 bg-orange-200 flex items-center flex items-center">
+                            <div className="relative w-full h-64">
+                                <Image alt={'1688-logo'} src={SixteenLogo} layout={"fill"} objectFit={'cover'} />
+                            </div>
                         </div>
                     </div>
                 </section>

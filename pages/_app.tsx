@@ -11,7 +11,7 @@ function MyApp({Component, pageProps}: AppProps) {
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
-                <link rel="preload" href="/fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossOrigin="anonymous"/>
+                <link rel="preload" href="/fonts/inter-var-font.woff2" as="font" type="font/woff2" crossOrigin="anonymous"/>
             </Head>
             <Layout>
                 <Component {...pageProps} />

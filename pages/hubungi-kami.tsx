@@ -73,7 +73,8 @@ const HubungiKami: NextPage = () => {
                                         </a>
                                     </li>
                                     <li>
-                                        <a href={'https://www.google.com/maps/dir//deliverinc/@-6.1721938,106.7155555,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2e69f1232b348385:0xbcb88b1ec3a2af86!2m2!1d106.7821273!2d-6.2212923'} target={'_blank'}
+                                        <a href={'https://www.google.com/maps/dir//deliverinc/@-6.1721938,106.7155555,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2e69f1232b348385:0xbcb88b1ec3a2af86!2m2!1d106.7821273!2d-6.2212923'}
+                                           target={'_blank'}
                                            rel="noopener noreferrer">
                                             <div className={'flex space-x-3 items-center cursor-pointer'}>
                                                 <LocationMarkerIcon className={'w-6 h-6 text-white'}/>
@@ -87,11 +88,13 @@ const HubungiKami: NextPage = () => {
                                 <h2 className={'text-2xl lg:text-3xl font-semibold'}>Gudang</h2>
                                 <div className="p-3 bg-white rounded-md space-y-2">
                                     <p className={'text-lg text-rose-600 font-semibold tracking-tight'}>GUANGZHOU</p>
-                                    <span className={'description-card'}>广东省广州市白云区石井街道龙湖村 `隆鑫工业园` 1~10号</span>
+                                    <span
+                                        className={'description-card'}>广州市白云区江高镇三元南路62号安托仓储11号仓（升鑫国际物流）导航：安托仓储</span>
                                 </div>
                                 <div className="p-3 bg-white rounded-sm space-y-2">
                                     <p className={'text-lg text-rose-600 font-semibold tracking-tight'}>YIWU</p>
-                                    <span className={'description-card'}>浙江省义乌市西站大道889号义乌市铁路口岸二区6幢1楼20-22号门</span>
+                                    <span
+                                        className={'description-card'}>浙江省义乌市西站大道889号义乌市铁路口岸二区6幢1楼20-22号门</span>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +106,8 @@ const HubungiKami: NextPage = () => {
                                 referrerPolicy="no-referrer-when-downgrade"/>
                         </div>
                     </div>
-                    <Image className={'!hidden md:!block'} src={WaimakaririBackground} layout={"fill"} objectFit={'cover'} alt={'deliverinc-background-cover'}/>
+                    <Image className={'!hidden md:!block'} src={WaimakaririBackground} layout={"fill"}
+                           objectFit={'cover'} alt={'deliverinc-background-cover'}/>
                 </section>
             </main>
         </>

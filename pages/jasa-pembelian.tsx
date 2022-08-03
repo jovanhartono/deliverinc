@@ -94,7 +94,7 @@ const JasaPembelian: NextPage = () => {
                                     </div>
                                     <button className="button">
                                         <a target={"_blank"} rel={'noreferrer noopener'}
-                                           href={'https://wa.me/message/AE5I33MU5ZDBM1'}>
+                                           href={'https://wa.wizard.id/3ee612'}>
                                             <div className="space-x-2 flex items-center">
                                                 <svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"
                                                      viewBox="0 0 24 24" width="24px"

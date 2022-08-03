@@ -25,6 +25,7 @@ import SwiperCard from "../components/swiper-card";
 import {Customers} from "../const/customer";
 import {Service, Services} from "../const/services";
 import {Achievements} from "../const/achievements";
+import Link from "next/link";
 
 type HeroIcon = (props: ComponentProps<'svg'>) => JSX.Element;
 
@@ -107,7 +108,8 @@ const Home: NextPage = () => {
                                 <p className={'text-base tracking-tight font-normal md:font-light w-full'}>
                                     Telah berpengalaman melayani pelanggan setia selama 9 tahun dengan berbagai layanan
                                     solutif,
-                                    mulai dari jasa pengiriman melalui laut dan udara hingga jasa pembelian dan transfer.
+                                    mulai dari jasa pengiriman melalui laut dan udara hingga jasa pembelian dan
+                                    transfer.
                                 </p>
                             </div>
                             <button className="shadow-md shadow-red-500/50 hover:shadow-yellow-500/50 cursor-pointer inline-flex items-center bg-gradient-to-r to-rose-700 from-red-500 font-medium
@@ -118,7 +120,8 @@ const Home: NextPage = () => {
                             </button>
                         </div>
                     </div>
-                    <Image alt="Deliverinc pengiriman" priority={true} src={heroImage} layout={"fill"} objectFit={"cover"}/>
+                    <Image alt="Deliverinc pengiriman" priority={true} src={heroImage} layout={"fill"}
+                           objectFit={"cover"}/>
                 </section>
                 <section
                     className="scroll-mt-16 md:scroll-mt-24 container padding-section relative grid grid-cols-1 md:grid-cols-2 gap-12"
@@ -206,7 +209,8 @@ const Home: NextPage = () => {
                         </div>
                     </div>
                 </section>
-                <section className={'padding-section min-h-[75vh] bg-gradient-to-br from-pink-50 via-red-50 to-rose-50'}>
+                <section
+                    className={'padding-section min-h-[75vh] bg-gradient-to-br from-pink-50 via-red-50 to-rose-50'}>
                     <div className="container grid grid-cols-1 gap-12">
                         <div className={'space-y-3 md:mt-6 relative z-10 text-left lg:text-center'}>
                             <h1 className={'heading-section text-gray-900'}>Layanan
@@ -224,15 +228,32 @@ const Home: NextPage = () => {
                             {
                                 Services.map((service: Service, index: number) => {
                                     return (
-                                        <div key={index}
-                                             className="group p-4 ring rounded-lg ring-gray-300 ring-1 shadow-md hover:shadow-amber-100 hover:ring-amber-500 space-y-4">
-                                            <service.icon
-                                                className={'h-12 w-12 text-rose-500 group-hover:text-amber-500 basic-transition'}/>
-                                            <div className={'space-y-2'}>
-                                                <h2 className={'text-gray-900 text-2xl font-semibold group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-b group-hover:from-amber-600 group-hover:to-yellow-400'}>{service.title}</h2>
-                                                <p className={'group-hover:text-gray-600 text-sm description-card'}>{service.description}</p>
-                                            </div>
-                                        </div>
+                                        service.title === 'Jasa Pembelian' ?
+                                            (
+                                                <Link href={'/jasa-pembelian'} key={index}>
+                                                    <div
+                                                         className="group p-4 ring rounded-lg ring-gray-300 ring-1 shadow-md hover:shadow-amber-100 hover:ring-amber-500 space-y-4">
+                                                        <service.icon
+                                                            className={'h-12 w-12 text-rose-500 group-hover:text-amber-500 basic-transition'}/>
+                                                        <div className={'space-y-2'}>
+                                                            <h2 className={'text-gray-900 text-2xl font-semibold group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-b group-hover:from-amber-600 group-hover:to-yellow-400'}>{service.title}</h2>
+                                                            <p className={'group-hover:text-gray-600 text-sm description-card'}>{service.description}</p>
+                                                        </div>
+                                                    </div>
+                                                </Link>
+                                            )
+                                            :
+                                            (
+                                                <div key={index}
+                                                     className="group p-4 ring rounded-lg ring-gray-300 ring-1 shadow-md hover:shadow-amber-100 hover:ring-amber-500 space-y-4">
+                                                    <service.icon
+                                                        className={'h-12 w-12 text-rose-500 group-hover:text-amber-500 basic-transition'}/>
+                                                    <div className={'space-y-2'}>
+                                                        <h2 className={'text-gray-900 text-2xl font-semibold group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-b group-hover:from-amber-600 group-hover:to-yellow-400'}>{service.title}</h2>
+                                                        <p className={'group-hover:text-gray-600 text-sm description-card'}>{service.description}</p>
+                                                    </div>
+                                                </div>
+                                            )
                                     );
                                 })
                             }
@@ -284,4 +305,4 @@ const Home: NextPage = () => {
     )
 }
 
-export default Home
+export default Home;

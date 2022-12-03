@@ -5,6 +5,7 @@ import DeliveredOrderImage from '../public/images/deliverinc-order-sampai.svg';
 import ConsultationImage from '../public/images/deliverinc-konsultasi.svg';
 import ConfirmationOrderImage from '../public/images/deliverinc-konfirmasi-order.svg';
 import DeliveryImage from '../public/images/deliverinc-pengiriman.svg';
+import KompasLogo from '../public/images/kompas-logo.png';
 import {
     ArrowDownIcon, ChatIcon,
     CreditCardIcon,
@@ -298,6 +299,17 @@ const Home: NextPage = () => {
                         <div className="relative h-full">
                             <Image src={RadialGradient2} alt={'deliverinc radial background'} layout={"fill"}/>
                         </div>
+                    </div>
+                </section>
+                <section
+                    className="text-left lg:text-center grid grid-cols-1 overflow-hidden padding-section container gap-12 relative">
+                    <h1 className="heading-section rose-clip-text">
+                        Liputan Media
+                    </h1>
+                    <div className="flex h-32">
+                        <a className="relative h-full w-32" target={"_blank"} href={"https://umkm.kompas.com/read/2022/11/07/140000183/impor-dari-china-jadi-lebih-mudah-berkat-layanan-deliverinc"} rel="noreferrer">
+                            <Image src={KompasLogo} layout={"fill"} objectFit={"contain"}/>
+                        </a>
                     </div>
                 </section>
             </main>

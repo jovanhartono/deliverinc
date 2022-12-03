@@ -36,7 +36,7 @@ const OceanCategory: CategoryService[] = [
     },
     {
         category: 'Non Plastik',
-        basePrice: 6500000
+        basePrice: 6000000
     },
     {
         category: 'Bahan Kimia',
@@ -44,7 +44,7 @@ const OceanCategory: CategoryService[] = [
     },
     {
         category: 'Mesin',
-        basePrice: 6500000
+        basePrice: 7000000
     },
     {
         category: 'Mesin Bekas',
@@ -52,11 +52,11 @@ const OceanCategory: CategoryService[] = [
     },
     {
         category: 'Makanan',
-        basePrice: 6500000
+        basePrice: 7000000
     },
     {
         category: 'Pakaian',
-        basePrice: 7500000
+        basePrice: 8000000
     },
     {
         category: 'Kosmetik',

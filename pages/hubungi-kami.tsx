@@ -73,12 +73,12 @@ const HubungiKami: NextPage = () => {
                                         </a>
                                     </li>
                                     <li>
-                                        <a href={'https://www.google.com/maps/dir//deliverinc/@-6.1721938,106.7155555,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2e69f1232b348385:0xbcb88b1ec3a2af86!2m2!1d106.7821273!2d-6.2212923'}
+                                        <a href={'https://www.google.com/maps/dir//WYNZ+DETAILING+(Auto+Detailing+Service),+Rukan+Wallstreet+B37,+Jl.+Green+Lake+City+Boulevard,+Duri+Kosambi,+Cengkareng,+Tangerang+City,+Jakarta+15147/@-6.181774,106.669372,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x2e69f9963cb0ea29:0x10149387e8435d67!2m2!1d106.7105671!2d-6.1818589'}
                                            target={'_blank'}
                                            rel="noopener noreferrer">
                                             <div className={'flex space-x-3 items-center cursor-pointer'}>
                                                 <LocationMarkerIcon className={'w-6 h-6 text-white'}/>
-                                                <span className={'underline underline-offset-4'}>Bellezza BSA 1st Floor Unit 106</span>
+                                                <span className={'underline underline-offset-4'}>Wallstreet B37, Greenlake City</span>
                                             </div>
                                         </a>
                                     </li>
@@ -101,7 +101,7 @@ const HubungiKami: NextPage = () => {
                         <div className="pb-12 md:pb-0">
                             <iframe
                                 title={'deliverinc-map'}
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3213248293355!2d106.77993861494737!3d-6.221292295496428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1232b348385%3A0xbcb88b1ec3a2af86!2sDeliverinc%20%7C%20PT%20DELIVERINC%20EKSPRESINDO%20SUKSES%20JAYA!5e0!3m2!1sen!2sid!4v1652503530469!5m2!1sen!2sid"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.617987157131!2d106.70799687531148!3d-6.181855560572705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f9963cb0ea29%3A0x10149387e8435d67!2sWYNZ%20DETAILING%20(Auto%20Detailing%20Service)!5e0!3m2!1sen!2sid!4v1682956497011!5m2!1sen!2sid"
                                 className={'w-full h-full aspect-square'} allowFullScreen={true} loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"/>
                         </div>

@@ -74,15 +74,15 @@ export default function Footer() {
                     <h2 className={`rose-clip-text text-xl font-medium`}>Location</h2>
                     <ul className={'font-light text-sm tracking-tight space-y-3'}>
                         <li>
-                            <a href={'https://www.google.com/maps/dir//deliverinc/@-6.1721938,106.7155555,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2e69f1232b348385:0xbcb88b1ec3a2af86!2m2!1d106.7821273!2d-6.2212923'}
+                            <a href={'https://www.google.com/maps/dir//WYNZ+DETAILING+(Auto+Detailing+Service),+Rukan+Wallstreet+B37,+Jl.+Green+Lake+City+Boulevard,+Duri+Kosambi,+Cengkareng,+Tangerang+City,+Jakarta+15147/@-6.181774,106.669372,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x2e69f9963cb0ea29:0x10149387e8435d67!2m2!1d106.7105671!2d-6.1818589'}
                                target="_blank" rel="noopener noreferrer" className="link-text">PT. Deliverinc
                                 Ekspresindo Sukses Jaya</a>
                         </li>
                         <li>
                             <a target="_blank" rel="noopener noreferrer"
-                               href={'https://www.google.com/maps/dir//deliverinc/@-6.1721938,106.7155555,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2e69f1232b348385:0xbcb88b1ec3a2af86!2m2!1d106.7821273!2d-6.2212923'}
+                               href={'https://www.google.com/maps/dir//WYNZ+DETAILING+(Auto+Detailing+Service),+Rukan+Wallstreet+B37,+Jl.+Green+Lake+City+Boulevard,+Duri+Kosambi,+Cengkareng,+Tangerang+City,+Jakarta+15147/@-6.181774,106.669372,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x2e69f9963cb0ea29:0x10149387e8435d67!2m2!1d106.7105671!2d-6.1818589'}
                                className={'text-gray-500 border-b border-b-gray-500 hover:border-b-rose-500 transition-all duration-200'}>
-                                Bellezza BSA 1st Floor Unit 106 Permata Hijau Keb. Lama Jakarta Selatan 12210
+                                Rukan Wallstreet B37, Jl. Greenlake City Boulevard, Duri Kosambi, Tangerang City 15147
                             </a>
                         </li>
                     </ul>

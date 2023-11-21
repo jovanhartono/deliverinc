@@ -1,11 +1,23 @@
 import {useRouter} from "next/router";
+import {MouseEvent} from "react";
 
 export default function WhatsappFloating() {
     const router = useRouter();
 
+    const handleOnClick = () => {
+        // @ts-ignore
+        window.dataLayer.push({
+            event: 'whatsapp chat',
+            event_action: 'chat: 6281296209489',
+            number: "6281296209489",
+            type: 'chat',
+            url: "https://wa.me/message/AE5I33MU5ZDBM1",
+      })
+    }
+
     return (
         <div className={'fixed bottom-3 right-3 z-10'}>
-            <a href={router.pathname.includes('/jasa-pembelian') ? 'https://wa.wizard.id/3ee612' : 'https://wa.me/message/AE5I33MU5ZDBM1'} target={'_blank'} rel='noopener noreferrer'>
+            <a href={'https://wa.me/message/AE5I33MU5ZDBM1'} onClick={handleOnClick} target={'_blank'} rel='noopener noreferrer'>
                 <div className={'bg-emerald-500 rounded-full p-3'}>
                     <svg fill="#f8fafc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48px" height="48px">
                         <path

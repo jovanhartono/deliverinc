@@ -17,7 +17,7 @@ export default function WhatsappFloating() {
 
     return (
         <div className={'fixed bottom-3 right-3 z-10'}>
-            <a href={'https://wa.me/message/AE5I33MU5ZDBM1'} onClick={handleOnClick} target={'_blank'} rel='noopener noreferrer'>
+            <a href={'https://wa.me/6281296209489?text=Halo%20%2C%20Bisa%20infokan%20lebih%20detail%20mengenai%20Jasanya%20-%20https%3A%2F%2Fdeliverinc.id.%0AThank%20you!'} onClick={handleOnClick} target={'_blank'} rel='noopener noreferrer'>
                 <div className={'bg-emerald-500 rounded-full p-3'}>
                     <svg fill="#f8fafc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48px" height="48px">
                         <path

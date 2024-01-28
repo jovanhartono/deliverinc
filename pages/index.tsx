@@ -121,7 +121,7 @@ const Home: NextPage = () => {
                             </button>
                         </div>
                     </div>
-                    <Image alt="Deliverinc pengiriman" priority={true} src={heroImage} layout={"fill"}
+                    <Image alt="Deliverinc pengiriman - import china" priority={true} src={heroImage} layout={"fill"}
                            objectFit={"cover"}/>
                 </section>
                 <section
@@ -188,7 +188,7 @@ const Home: NextPage = () => {
                                             <SwiperSlide key={index}>
                                                 <div className="rounded-lg overflow-hidden py-6">
                                                     <div className="relative w-full aspect-video">
-                                                        <Image alt={iconBox.title} src={iconBox.image}
+                                                        <Image alt={`${iconBox.title} - impor dari china`} src={iconBox.image}
                                                                objectFit={"contain"} layout={"fill"}/>
                                                     </div>
                                                     <div className={'p-6 space-y-3'}>
@@ -206,7 +206,7 @@ const Home: NextPage = () => {
                     <div
                         className="absolute top-0 left-0 -right-1/2 md:right-0 md:-top-1/5 md:-left-1/4 max-w-full bottom-0">
                         <div className="relative h-full">
-                            <Image src={RadialGradient} alt={'deliverinc radial background'} layout={"fill"}/>
+                            <Image src={RadialGradient} alt={'deliverinc radial background - impor dari china'} layout={"fill"}/>
                         </div>
                     </div>
                 </section>
@@ -297,7 +297,7 @@ const Home: NextPage = () => {
                     <div
                         className="absolute max-w-full -top-1/2 bottom-0 left-0 right-0 md:inset-0">
                         <div className="relative h-full">
-                            <Image src={RadialGradient2} alt={'deliverinc radial background'} layout={"fill"}/>
+                            <Image src={RadialGradient2} alt={'deliverinc radial background - impor dari china'} layout={"fill"}/>
                         </div>
                     </div>
                 </section>
@@ -308,7 +308,7 @@ const Home: NextPage = () => {
                     </h1>
                     <div className="flex h-32">
                         <a className="relative h-full w-32" target={"_blank"} href={"https://umkm.kompas.com/read/2022/11/07/140000183/impor-dari-china-jadi-lebih-mudah-berkat-layanan-deliverinc"} rel="noreferrer">
-                            <Image src={KompasLogo} layout={"fill"} objectFit={"contain"}/>
+                            <Image src={KompasLogo} layout={"fill"} objectFit={"contain"} alt="import barang dari china"/>
                         </a>
                     </div>
                 </section>

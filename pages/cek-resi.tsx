@@ -215,7 +215,7 @@ const CekResi: NextPage = () => {
                     </div>
                     <div className="relative min-h-[300px] md:min-h-[350px] lg:min-h-[400px] xl:min-h-[450px]">
                         <Image src={TrackingImage} layout={'fill'} objectFit={"contain"} objectPosition={'top'}
-                               alt={'Deliverinc-hubungi-kami'}/>
+                               alt={'Deliverinc hubungi kami - import barang china'}/>
                     </div>
                 </section>
                 <section className="padding-section">
@@ -234,7 +234,7 @@ const CekResi: NextPage = () => {
                         <div
                             className="relative min-h-[350px] md:min-h-[450px] xl:min-h-[550px] rounded-lg overflow-hidden shadow-lg">
                             <Image src={HeroBackground} layout={'fill'} objectFit={"cover"}
-                                   alt={'Deliverinc-hubungi-kami'}/>
+                                   alt={'Deliverinc hubungi kami - impor dari china'}/>
                         </div>
                     </div>
                 </section>

@@ -180,7 +180,7 @@ const CekHarga: NextPage = () => {
                         <div
                             className="relative min-h-[350px] md:min-h-[450px] xl:min-h-[550px] rounded-lg overflow-hidden">
                             <Image src={WarehouseImage} layout={'fill'} objectFit={"cover"} priority={true}
-                                   alt={'Deliverinc-hubungi-kami'}/>
+                                   alt={'Deliverinc hubungi kami - import barang china'}/>
                         </div>
                     </div>
                 </section>
@@ -287,7 +287,7 @@ const CekHarga: NextPage = () => {
                     </div>
                     <div className="relative">
                         <Image src={PriceCheckImage} layout={"fill"} objectFit={'contain'}
-                               alt={'deliverinc-check-harga'}/>
+                               alt={'deliverinc check harga - import barang china'}/>
                     </div>
                 </section>
             </main>

@@ -13,7 +13,7 @@ export default function Footer() {
             <div className={'grid grid-cols-2 gap-12 md:gap-0 md:grid-cols-4'}>
                 <div className={'col-span-2 md:col-span-1'}>
                     <div className="relative w-32 h-12">
-                        <Image src={Logo} layout={"fill"} objectFit={"cover"} alt={'deliverinc logo footer'}/>
+                        <Image src={Logo} layout={"fill"} objectFit={"cover"} alt={'deliverinc logo footer - cara import barang dari china'}/>
                     </div>
                 </div>
                 <div className={'space-y-4'}>
@@ -42,7 +42,7 @@ export default function Footer() {
                                 <div className="flex items-center space-x-2">
                                     <div className="relative w-6 h-6">
                                         <Image src={InstagramIcon} layout={"fill"} objectFit={"cover"}
-                                               alt="deliverinc instagram icon footer"/>
+                                               alt="deliverinc instagram icon footer - cara import barang dari china"/>
                                     </div>
                                     <p className={'link-text'}>Instagram</p>
                                 </div>
@@ -54,7 +54,7 @@ export default function Footer() {
                                 <div className="flex items-center space-x-2">
                                     <div className="relative w-6 h-6">
                                         <Image src={WhatsappIcon} layout={"fill"} objectFit={"cover"}
-                                               alt="deliverinc whatsapp icon footer"/>
+                                               alt="deliverinc whatsapp icon footer - cara import barang dari china"/>
                                     </div>
                                     <p className={'link-text'}>Whatsapp</p>
                                 </div>

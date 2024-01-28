@@ -127,7 +127,7 @@ const JasaPembelian: NextPage = () => {
                                 <Image src={PaymentImage} layout={"fill"}
                                        priority={true}
                                        objectFit={"cover"}
-                                       alt={'Deliverinc Payment'}
+                                       alt={'Deliverinc Payment impor barang dari china'}
                                        objectPosition={"right"}/>
                             </div>
                         </div>
@@ -168,7 +168,7 @@ const JasaPembelian: NextPage = () => {
                     </div>
                     <div className="relative hidden md:block">
                         <Image src={BusinessDealImage} layout={"fill"} objectFit={'contain'}
-                               alt={'deliverinc-transaksi'}/>
+                               alt={'deliverinc transaksi impor barang dari china'}/>
                     </div>
                 </section>
                 <section className="padding-section bg-gradient-to-b from-gray-50/50 to-rose-100/20">
@@ -184,7 +184,7 @@ const JasaPembelian: NextPage = () => {
                                             key={index}>
                                             <div className="relative w-48 h-32 xl:-top-5 xl:-mt-10">
                                                 <Image src={item.image} layout={"fill"} objectPosition={"center"}
-                                                       objectFit={"contain"} alt={'deliverinc-quick-chat'}/>
+                                                       objectFit={"contain"} alt={'deliverinc-quick-chat import barang dari china'}/>
                                             </div>
                                             <div className="space-y-1 mt-6">
                                                 <h3 className={'text-gray-700 tracking-tight text-xl font-medium'}>{index + 1}. {item.title}</h3>
@@ -203,27 +203,27 @@ const JasaPembelian: NextPage = () => {
                     <div className="grid md:grid-cols-2 xl:grid-cols-3 mt-12">
                         <div className="min-h-[300px] lg:min-h-[400px] p-6 from-amber-200 to-orange-300 bg-gradient-to-tr flex items-center">
                             <div className="relative w-full h-64">
-                                <Image alt={'alibaba-logo'} src={AlibabaLogo} layout={"fill"} objectFit={'cover'} objectPosition={"center"} />
+                                <Image alt={'alibaba-logo impor dari china'} src={AlibabaLogo} layout={"fill"} objectFit={'cover'} objectPosition={"center"} />
                             </div>
                         </div>
                         <div className="min-h-[300px] lg:min-h-[400px] p-6 bg-gradient-to-tr from-rose-500 to-red-500 flex items-center">
                             <div className="relative w-full h-64">
-                                <Image alt={'jd.com-logo'} src={JDLogo} layout={"fill"} objectFit={'cover'} />
+                                <Image alt={'jd.com-logo impor dari china'} src={JDLogo} layout={"fill"} objectFit={'cover'} />
                             </div>
                         </div>
                         <div className="min-h-[300px] lg:min-h-[400px] p-6 bg-orange-500 flex items-center flex items-center">
                             <div className="relative w-full h-64">
-                                <Image alt={'taobao-logo'} src={TaobaoLogo} layout={"fill"} objectFit={'cover'} />
+                                <Image alt={'taobao-logo impor dari china'} src={TaobaoLogo} layout={"fill"} objectFit={'cover'} />
                             </div>
                         </div>
                         <div className="min-h-[300px] lg:min-h-[400px] p-6 bg-rose-100 flex items-center flex items-center">
                             <div className="relative w-full h-64">
-                                <Image alt={'aliexpress-logo'} src={AliExpressLogo} layout={"fill"} objectFit={'cover'} />
+                                <Image alt={'aliexpress-logo impor dari china'} src={AliExpressLogo} layout={"fill"} objectFit={'cover'} />
                             </div>
                         </div>
                         <div className="min-h-[300px] lg:min-h-[400px] p-6 bg-orange-200 flex items-center flex items-center">
                             <div className="relative w-full h-64">
-                                <Image alt={'1688-logo'} src={SixteenLogo} layout={"fill"} objectFit={'cover'} />
+                                <Image alt={'1688-logo impor dari china'} src={SixteenLogo} layout={"fill"} objectFit={'cover'} />
                             </div>
                         </div>
                     </div>

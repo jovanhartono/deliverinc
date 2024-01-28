@@ -85,7 +85,7 @@ const TentangKami: NextPage = () => {
                                 <Image src={ContainerImage} layout={"fill"}
                                        priority={true}
                                        objectFit={"cover"}
-                                       alt={'Deliverinc Container'}
+                                       alt={'Deliverinc Container - import barang dari china'}
                                        objectPosition={"bottom"}/>
                             </div>
                         </div>
@@ -129,7 +129,7 @@ const TentangKami: NextPage = () => {
                     </div>
                     <div className="relative hidden md:block">
                         <Image src={BusinessDealImage} layout={"fill"} objectFit={'contain'}
-                               alt={'deliverinc-bisnis-deal'}/>
+                               alt={'deliverinc bisnis deal - import barang dari china'}/>
                     </div>
                 </section>
                 <section
@@ -164,7 +164,7 @@ const TentangKami: NextPage = () => {
                     </div>
                     <div className="absolute right-0 bottom-0 top-1/2 left-1/3 md:left-1/2">
                         <div className="relative h-full">
-                            <Image src={ChartImage} layout={'fill'} alt={'deliverinc-grafik-permintaan'}/>
+                            <Image src={ChartImage} layout={'fill'} alt={'deliverinc grafik permintaan - cara import barang dari china'}/>
                         </div>
                     </div>
                 </section>
@@ -176,7 +176,7 @@ const TentangKami: NextPage = () => {
                     <div className="flex items-start">
                         <div className="w-full relative hidden md:block h-[500px]">
                             <Image src={QuestionImage} layout={"fill"} objectFit={'contain'}
-                                   alt={'deliverinc-bisnis-kesepakatan'}/>
+                                   alt={'deliverinc bisnis kesepakatan - cara import barang dari china'}/>
                         </div>
                     </div>
                 </section>

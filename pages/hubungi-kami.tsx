@@ -38,7 +38,7 @@ const HubungiKami: NextPage = () => {
                         </div>
                         <div className="relative min-h-[300px] md:min-h-[350px] lg:min-h-[400px] xl:min-h-[450px]">
                             <Image src={HeroBackground} layout={'fill'} objectFit={"contain"} objectPosition={'top'}
-                                   alt={'Deliverinc-hubungi-kami'}/>
+                                   alt={'Deliverinc hubungi kami - impor dari china'}/>
                         </div>
                     </div>
                 </section>
@@ -107,7 +107,7 @@ const HubungiKami: NextPage = () => {
                         </div>
                     </div>
                     <Image className={'!hidden md:!block'} src={WaimakaririBackground} layout={"fill"}
-                           objectFit={'cover'} alt={'deliverinc-background-cover'}/>
+                           objectFit={'cover'} alt={'deliverinc background cover - impor dari china'}/>
                 </section>
             </main>
         </>

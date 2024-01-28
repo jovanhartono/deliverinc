@@ -33,7 +33,7 @@ export default function SwiperCard({swiperData}: SwiperCardProps) {
                                     <p className={'text-gray-500 font-light tracking-tight text-base md:text-xl'}>{item.comment}</p>
                                     <div className="flex space-x-3 items-center">
                                         <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden">
-                                            <Image src={item.avatar} alt={`deliverinc testimonial ${item.name}`} layout={"fill"} objectFit={"cover"} />
+                                            <Image src={item.avatar} alt={`deliverinc testimonial ${item.name} - cara impor barang dari china`} layout={"fill"} objectFit={"cover"} />
                                         </div>
                                         <div >
                                             <h2 className={'block font-semibold uppercase text-xl md:text-2xl text-red-500'}>{item.name}</h2>
